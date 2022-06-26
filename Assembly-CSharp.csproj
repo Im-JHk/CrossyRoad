@@ -57,6 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\SingletonBase.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player.cs" />
+    <Compile Include="Assets\Scripts\Objects\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Objects\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Objects\ObstacleMovemnet.cs" />
+    <Compile Include="Assets\Scripts\Objects\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

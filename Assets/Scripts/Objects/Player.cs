@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject playerObject = null;
+    public Rigidbody rigidbody;
 
-
-    void Start()
+    void Awake()
     {
-        
     }
 
     void Update()

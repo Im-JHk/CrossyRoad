@@ -6,18 +6,31 @@ public class PlayerController : MonoBehaviour
 {
     public CharacterController controller = null;
 
-    private Vector3 direction;
-    private bool left = false;
-    private bool right = false;
-    private bool up = false;
-    private bool down = false;
-    private bool isReady = false;
-    private bool isJump = false;
+    private bool leftKeyDown = false;
+    private bool rightKeyDown = false;
+    private bool upKeyDown = false;
+    private bool downKeyDown = false;
 
-    public Vector3 Direction { get { return direction; } private set { direction = value; } }
-    public float Horizontal { get { return horizontal; } private set { horizontal = value; } }
-    public float Vertical { get { return vertical; } private set { vertical = value; } }
-    public bool IsJump { get { return isJump; } private set { isJump = value; } }
+    private bool leftKeyUp = false;
+    private bool rightKeyUp = false;
+    private bool upKeyUp = false;
+    private bool downKeyUp = false;
+
+    private bool jumpKeyDown = false;
+
+    #region properties
+    public bool LeftKeyDown { get { return leftKeyDown; } private set { leftKeyDown = value; } }
+    public bool RightKeyDown { get { return rightKeyDown; } private set { rightKeyDown = value; } }
+    public bool UpKeyDown { get { return upKeyDown; } private set { upKeyDown = value; } }
+    public bool DownKeyDown { get { return downKeyDown; } private set { downKeyDown = value; } }
+
+    public bool LeftKeyUp { get { return leftKeyUp; } private set { leftKeyUp = value; } }
+    public bool RightKeyUp { get { return rightKeyUp; } private set { rightKeyUp = value; } }
+    public bool UpKeyUp { get { return upKeyUp; } private set { upKeyUp = value; } }
+    public bool DownKeyUp { get { return downKeyUp; } private set { downKeyUp = value; } }
+
+    public bool JumpKeyDown { get { return jumpKeyDown; } private set { jumpKeyDown = value; } }
+    #endregion
 
     void Awake()
     {
@@ -26,25 +39,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        InputControl();
+        InputControl();        
     }
 
     public void InputControl()
     {
-        left = Input.GetButtonUp("Left");
-        right = Input.GetButtonUp("Right");
-        up = Input.GetButtonUp("Up");
-        down = Input.GetButtonUp("Down");
-        isJump = Input.GetButton("Jump");
-        if(Input.GetButtonDown("Left") || Input.GetButtonDown("Right") || Input.GetButtonDown("Up") || Input.GetButtonDown("Down"))
-        {
-            isReady = true;
-        }
-        else
-        {
-            isReady = false;
-        }
+        leftKeyDown = Input.GetButtonDown("Left");
+        rightKeyDown = Input.GetButtonDown("Right");
+        upKeyDown = Input.GetButtonDown("Up");
+        downKeyDown = Input.GetButtonDown("Down");
 
-        //direction = new Vector3(horizontal, 0, vertical);
+        leftKeyUp = Input.GetButtonUp("Left");
+        rightKeyUp = Input.GetButtonUp("Right");
+        upKeyUp = Input.GetButtonUp("Up");
+        downKeyUp = Input.GetButtonUp("Down");
+
+        jumpKeyDown = Input.GetButtonDown("Jump");
     }
 }

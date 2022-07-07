@@ -20,10 +20,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 direction;
     private Vector2Int currentTile;
     private DirectionType directionType;
+    private bool canMove = false;
     private bool isMove = false;
     private bool isJumpReady = false;
 
-    private static readonly float maxMoveTime = 0.5f;
+    private static readonly float maxMoveTime = 0.2f;
 
     public Vector3 Direction { get { return direction; } private set { direction = value; } }
     public bool IsMove { get { return isMove; } private set { isMove = value; } }
@@ -46,21 +47,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        SetMovementInfomation();
-        OnMoveTargetPosition();
-
-        if (isMove)
+        if (!isMove)
         {
-            StartCoroutine(Move());
+            SetMovementInfomation();
+            if (canMove)
+            {
+                StartCoroutine(Move());
+            }
         }
     }
 
     private IEnumerator Move()
     {
         float elapsedMoveTime = 0.0f;
-
         Vector3 startPosition = player.transform.position;
         Vector3 targetPosition = player.transform.position + direction;
+
+        isMove = true;
 
         while (elapsedMoveTime < maxMoveTime)
         {
@@ -75,11 +78,9 @@ public class PlayerMovement : MonoBehaviour
             case DirectionType.None:
                 break;
             case DirectionType.Left:
-                print("l");
                 currentTile += new Vector2Int(0, -1);
                 break;
             case DirectionType.Right:
-                print("r");
                 currentTile += new Vector2Int(0, 1);
                 break;
             case DirectionType.Up:
@@ -89,8 +90,11 @@ public class PlayerMovement : MonoBehaviour
                 currentTile += new Vector2Int(-1, 0);
                 break;
         }
+
+        canMove = false;
         isMove = false;
-        print("cTile: " + currentTile);
+
+        yield break;
     }
 
     void Rotate()
@@ -113,25 +117,25 @@ public class PlayerMovement : MonoBehaviour
         {
             direction = Vector3.left;
             directionType = DirectionType.Left;
-            isMove = true;
+            OnMoveTargetPosition();
         }
         else if (playerController.RightKeyUp)
         {
             direction = Vector3.right;
             directionType = DirectionType.Right;
-            isMove = true;
+            OnMoveTargetPosition();
         }
         else if (playerController.UpKeyUp)
         {
             direction = Vector3.forward;
             directionType = DirectionType.Up;
-            isMove = true;
+            OnMoveTargetPosition();
         }
         else if (playerController.DownKeyUp)
         {
             direction = Vector3.back;
             directionType = DirectionType.Down;
-            isMove = true;
+            OnMoveTargetPosition();
         }
     }
 
@@ -139,15 +143,12 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (directionType)
         {
-            case DirectionType.None:
-                isMove = false;
-                break;
             case DirectionType.Left:
                 if(currentTile.y > 0)
                 {
                     if(levelManager.linearLineList[currentTile.x].TileList[currentTile.y - 1].CanMove)
                     {
-                        isMove = true;
+                        canMove = true;
                         break;
                     }
                 }
@@ -158,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if(levelManager.linearLineList[currentTile.x].TileList[currentTile.y + 1].CanMove)
                     {
-                        isMove = true;
+                        canMove = true;
                         break;
                     }
                 }
@@ -169,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if(levelManager.linearLineList[currentTile.x + 1].TileList[currentTile.y].CanMove)
                     {
-                        isMove = true;
+                        canMove = true;
                         break;
                     }
                 }
@@ -180,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     if(levelManager.linearLineList[currentTile.x - 1].TileList[currentTile.y].CanMove)
                     {
-                        isMove = true;
+                        canMove = true;
                         break;
                     }
                 }

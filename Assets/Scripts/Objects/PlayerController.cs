@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        InputControl();        
+        InputControl();
     }
 
     public void InputControl()

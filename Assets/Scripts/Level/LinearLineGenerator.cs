@@ -14,23 +14,9 @@ public class LinearLineGenerator : MonoBehaviour
     public static readonly float halfLineHeight = 0.5f;
     public static readonly float moveOnePoint = 1.0f;
     public static readonly float moveHalfPoint = 0.5f;
+    public static readonly float tileSizeX = 1.0f;
     public static readonly int maxTile = (int)lineWidth;
     public static readonly int maxHalfTile = (int)(lineWidth * 0.5f);
-
-    private void Awake()
-    {
-
-    }
-
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        
-    }
 
     public LinearLine GenerateLine()
     {
@@ -38,7 +24,7 @@ public class LinearLineGenerator : MonoBehaviour
 
         Vector3 position = Vector3.zero;
 
-        LinearLine newLine = new LinearLine(linePrefabs[randomNumber], position, 0);
+        LinearLine newLine = new LinearLine(linePrefabs[randomNumber], position, (LinearLineType)randomNumber, 0);
 
         newLine.SetTile();
 
@@ -51,7 +37,7 @@ public class LinearLineGenerator : MonoBehaviour
 
         Vector3 position = lastLine.lineObject.transform.position + new Vector3(0, 0, lineDepth);
 
-        LinearLine newLine = new LinearLine(linePrefabs[randomNumber], position, lastLine.LineIndex);
+        LinearLine newLine = new LinearLine(linePrefabs[randomNumber], position, (LinearLineType)randomNumber, lastLine.LineIndex);
 
         newLine.SetTile();
 

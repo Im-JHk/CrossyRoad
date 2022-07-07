@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class Respawner : MonoBehaviour
 {
-    public enum ObstacleType
-    {
-        Car = 0,
-        Train,
-        Floater,
-        Log
-    }
-    public GameObject respawnPosition = null;
     public GameObject obstacle = null;
 
+    private Transform respawnPosition;
     private ObstacleType obstacleType;
-    private float respawnDelay = 0f;
+    private readonly float respawnDelay = 0f;
 
-    void Start()
+    #region properties
+    public Transform RespawnPosition { get { return respawnPosition; } private set { respawnPosition = value; } }
+    public ObstacleType GetObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
+    #endregion
+
+    public Respawner(Vector3 position, ObstacleType type)
     {
-        //obstacleType = 
-        respawnDelay = Random.Range(0.5f, 3f);
+        respawnPosition.position = position;
+        obstacleType = type;
+        respawnDelay = Random.Range(1f, 3f);
+    }
 
+    void Awake()
+    {
+        respawnPosition = gameObject.AddComponent<Transform>();
     }
 
     void Update()

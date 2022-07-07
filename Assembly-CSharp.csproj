@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Level\LinearLine.cs" />
+    <Compile Include="Assets\Scripts\Level\RespawnerGenerator.cs" />
     <Compile Include="Assets\Scripts\Level\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Objects\CameraMovement.cs" />

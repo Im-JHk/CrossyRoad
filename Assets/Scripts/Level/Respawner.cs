@@ -7,17 +7,21 @@ public class Respawner : MonoBehaviour
     public GameObject obstacle = null;
 
     private Transform respawnPosition;
+    private Vector3 worldPosition;
     private ObstacleType obstacleType;
     private readonly float respawnDelay = 0f;
 
     #region properties
     public Transform RespawnPosition { get { return respawnPosition; } private set { respawnPosition = value; } }
+    public Vector3 WorldPosition { get { return worldPosition; } private set { worldPosition = value; } }
     public ObstacleType GetObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
     #endregion
 
     public Respawner(Vector3 position, ObstacleType type)
     {
-        respawnPosition.position = position;
+        //respawnPosition.position = position;
+        //transform.position = position;
+        worldPosition = position;
         obstacleType = type;
         respawnDelay = Random.Range(1f, 3f);
     }

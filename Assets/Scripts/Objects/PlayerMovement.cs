@@ -39,10 +39,11 @@ public class PlayerMovement : MonoBehaviour
         currentTile = new Vector2Int(0, LinearLineGenerator.maxHalfTile);
     }
 
-    private void Start()
+    void Start()
     {
         player.transform.position = levelManager.linearLineList[currentTile.x].TileList[currentTile.y].TileTransform;
         directionType = DirectionType.Down;
+        print(player.transform.position);
     }
 
     void Update()

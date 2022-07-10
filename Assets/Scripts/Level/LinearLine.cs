@@ -26,6 +26,7 @@ public class LinearLine : MonoBehaviour
     {
         lineObject = Instantiate(prefab);
         lineObject.transform.position = position;
+        lineTransform = lineObject.transform;
         lineType = type;
         lineIndex = index;
     }

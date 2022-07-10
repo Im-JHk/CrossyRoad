@@ -9,6 +9,8 @@ TagManager:
   - Road
   - Rail
   - Water
+  - PropObstacle
+  - BlockObstacle
   layers:
   - Default
   - TransparentFX

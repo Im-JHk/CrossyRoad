@@ -13,6 +13,13 @@ public class RespawnerGenerator : MonoBehaviour
         return newRespawner;
     }
 
+    public DeactivateObstacle GenerateDeactivater(Vector3 position)
+    {
+        DeactivateObstacle newDeactivater = new DeactivateObstacle(position);
+
+        return newDeactivater;
+    }
+
     void Start()
     {
         

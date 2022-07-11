@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
 {
     [SerializeField]
-    private List<GameObject> prefabList = new List<GameObject>(sizeof(ObjectPrefabType));
+    private List<GameObject> prefabList = new List<GameObject>(System.Enum.GetValues(typeof(ObjectPrefabType)).Length);
     private Dictionary<ObjectPrefabType, ObjectPool> objectPoolDictionary;
     private Dictionary<ObjectPrefabType, GameObject> poolDictionary;
 
@@ -15,8 +15,11 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
     {
         objectPoolDictionary = new Dictionary<ObjectPrefabType, ObjectPool>();
         poolDictionary = new Dictionary<ObjectPrefabType, GameObject>();
+    }
 
-        foreach(ObjectPrefabType type in System.Enum.GetValues(typeof(ObjectPrefabType)))
+    void Start()
+    {
+        foreach (ObjectPrefabType type in System.Enum.GetValues(typeof(ObjectPrefabType)))
         {
             InitializePoolDictionary(prefabList[(int)type], type);
             InitializeObjectPool(prefabList[(int)type], type);

@@ -15,7 +15,7 @@ public class Car : Obstacle, IMovable
         
     }
 
-    public void Move()
+    public void Move(float moveSpeed)
     {
 
     }

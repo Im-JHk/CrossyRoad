@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    private Queue<GameObject> objectQueue;
+    private Queue<GameObject> objectQueue = new Queue<GameObject>();
     private GameObject objectPrefab;
     private ObjectPrefabType objectType;
 

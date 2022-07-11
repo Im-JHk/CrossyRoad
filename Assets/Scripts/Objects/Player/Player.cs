@@ -21,5 +21,6 @@ public class Player : MonoBehaviour
     public void InitializePlayer()
     {
         isAlive = true;
+        transform.position = new Vector3(0f, 0f, 0f);
     }
 }

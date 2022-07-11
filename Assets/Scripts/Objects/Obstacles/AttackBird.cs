@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackBird : MonoBehaviour
+public class AttackBird : MonoBehaviour, IMovable
 {
     void Start()
     {
@@ -12,5 +12,10 @@ public class AttackBird : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Move(float moveSpeed)
+    {
+
     }
 }

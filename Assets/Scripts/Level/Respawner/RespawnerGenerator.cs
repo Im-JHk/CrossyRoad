@@ -13,9 +13,9 @@ public class RespawnerGenerator : MonoBehaviour
         return newRespawner;
     }
 
-    public DeactivateObstacle GenerateDeactivater(Vector3 position)
+    public Deactivater GenerateDeactivater(Vector3 position)
     {
-        DeactivateObstacle newDeactivater = new DeactivateObstacle(position);
+        Deactivater newDeactivater = new Deactivater(position);
 
         return newDeactivater;
     }

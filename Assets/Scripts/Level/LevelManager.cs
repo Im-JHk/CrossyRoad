@@ -22,10 +22,8 @@ public enum ObjectPrefabType
 {
     Tree1 = 0,
     Tree2,
-    Rock,
     Car1,
     Car2,
-    Train,
     Floater,
     Log
 }
@@ -37,7 +35,7 @@ public class LevelManager : SingletonBase<LevelManager>
     public RespawnerGenerator respawnerGenerator = null;
     public List<LinearLine> linearLineList;
     public List<Respawner> respawnerList;
-    public List<DeactivateObstacle> deactivaterList;
+    public List<Deactivater> deactivaterList;
 
     void Awake()
     {
@@ -45,7 +43,7 @@ public class LevelManager : SingletonBase<LevelManager>
         respawnerGenerator = GetComponentInChildren<RespawnerGenerator>();
         linearLineList = new List<LinearLine>();
         respawnerList = new List<Respawner>();
-        deactivaterList = new List<DeactivateObstacle>();
+        deactivaterList = new List<Deactivater>();
 
         // Test용으로 10개 생성
         for (int i = 0; i < 10; ++i)

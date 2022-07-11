@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public enum DirectionType
-    {
-        None = 0,
-        Left,
-        Right,
-        Up,
-        Down
-    }
-
-    public LevelManager levelManager = null;
-    public PlayerController playerController = null;
-    public Player player = null;
-    public Rigidbody rigidbody = null;
+    private Player player = null;
+    private PlayerController playerController = null;
+    private Animator animator;
 
     private Vector3 direction;
     private Vector2Int currentTile;
@@ -25,33 +15,37 @@ public class PlayerMovement : MonoBehaviour
     private bool isMove = false;
     private bool isJumpReady = false;
 
-    private static readonly float maxMoveTime = 0.2f;
+    private static readonly float maxMoveTime = 0.4f;
     private static readonly float maxHalfMoveTime = 0.1f;
     private static readonly float jumpPower = 10f;
+    private static readonly float rotationSpeed = 360f;
 
     public Vector3 Direction { get { return direction; } private set { direction = value; } }
     public bool IsMove { get { return isMove; } private set { isMove = value; } }
     public bool IsJumpReady { get { return isJumpReady; } private set { isJumpReady = value; } }
 
-    void Awake()
+    private void Awake()
     {
-        levelManager = FindObjectOfType<LevelManager>();
-        playerController = GetComponent<PlayerController>();
         player = GetComponentInParent<Player>();
-        rigidbody = GetComponentInChildren<Rigidbody>();
+        playerController = GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
 
         currentTile = new Vector2Int(0, LinearLineGenerator.maxHalfTile);
     }
 
-    void Start()
+    private void Start()
     {
-        player.transform.position = levelManager.linearLineList[currentTile.x].TileList[currentTile.y].TileTransform + new Vector3(0f, 0.2f, 0f);
+        player.transform.position = LevelManager.Instance.linearLineList[currentTile.x].TileList[currentTile.y].TileTransform + new Vector3(0f, 0.2f, 0f);
         directionType = DirectionType.Down;
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        if (!isMove)
+    }
+
+    private void Update()
+    {
+        if (!GameManager.Instance.IsGameOver && !isMove)
         {
             SetMovementInfomation();
             if (canMove)
@@ -66,14 +60,17 @@ public class PlayerMovement : MonoBehaviour
         float elapsedMoveTime = 0.0f;
         Vector3 startPosition = player.transform.position;
         Vector3 targetPosition = player.transform.position + direction * LinearLineGenerator.moveOnePoint;
+        Quaternion startRotation = player.transform.rotation;
 
         isMove = true;
+        animator.SetBool("OnMove", true);
 
         //rigidbody.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
 
         while (elapsedMoveTime < maxMoveTime)
         {
             player.transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedMoveTime / maxMoveTime);
+            player.transform.rotation = Quaternion.Lerp(startRotation, Quaternion.LookRotation(direction), elapsedMoveTime / maxMoveTime);
             elapsedMoveTime += Time.deltaTime;
             yield return null;
         }
@@ -99,13 +96,11 @@ public class PlayerMovement : MonoBehaviour
 
         canMove = false;
         isMove = false;
+        animator.SetBool("OnMove", false);
+
+        GameManager.Instance.PlayerMove(player.transform.position, targetPosition - startPosition, directionType);
 
         yield break;
-    }
-
-    void Rotate()
-    {
-
     }
 
     private void SetMovementInfomation()
@@ -152,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             case DirectionType.Left:
                 if(currentTile.y > 0)
                 {
-                    if(levelManager.linearLineList[currentTile.x].TileList[currentTile.y - 1].CanMove)
+                    if(LevelManager.Instance.linearLineList[currentTile.x].TileList[currentTile.y - 1].CanMove)
                     {
                         canMove = true;
                         break;
@@ -163,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
             case DirectionType.Right:
                 if (currentTile.y < LinearLineGenerator.maxTile - 1)
                 {
-                    if(levelManager.linearLineList[currentTile.x].TileList[currentTile.y + 1].CanMove)
+                    if(LevelManager.Instance.linearLineList[currentTile.x].TileList[currentTile.y + 1].CanMove)
                     {
                         canMove = true;
                         break;
@@ -172,9 +167,9 @@ public class PlayerMovement : MonoBehaviour
                 isMove = false;
                 break;
             case DirectionType.Up:
-                if (currentTile.x < levelManager.linearLineList.Count - 1)
+                if (currentTile.x < LevelManager.Instance.linearLineList.Count - 1)
                 {
-                    if(levelManager.linearLineList[currentTile.x + 1].TileList[currentTile.y].CanMove)
+                    if(LevelManager.Instance.linearLineList[currentTile.x + 1].TileList[currentTile.y].CanMove)
                     {
                         canMove = true;
                         break;
@@ -185,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
             case DirectionType.Down:
                 if (currentTile.x > 0)
                 {
-                    if(levelManager.linearLineList[currentTile.x - 1].TileList[currentTile.y].CanMove)
+                    if(LevelManager.Instance.linearLineList[currentTile.x - 1].TileList[currentTile.y].CanMove)
                     {
                         canMove = true;
                         break;

@@ -18,6 +18,17 @@ public enum ObstacleType
     Floater,
     Log
 }
+public enum ObjectPrefabType
+{
+    Tree1 = 0,
+    Tree2,
+    Rock,
+    Car1,
+    Car2,
+    Train,
+    Floater,
+    Log
+}
 
 public class LevelManager : SingletonBase<LevelManager>
 {
@@ -43,7 +54,10 @@ public class LevelManager : SingletonBase<LevelManager>
         }
         for (int i = 0; i < linearLineList.Count; ++i)
         {
-            AddRespawnerAndDeactivater(i);
+            if (linearLineList[i].LineType != LinearLineType.Grass)
+            {
+                AddRespawnerAndDeactivater(i);
+            }
         }
     }
 

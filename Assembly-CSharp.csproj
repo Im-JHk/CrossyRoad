@@ -56,23 +56,37 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Objects\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Level\LinearLineGenerator.cs" />
+    <Compile Include="Assets\_Gloomy_Animal\Script\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Level\Map\LinearLineGenerator.cs" />
     <Compile Include="Assets\Scripts\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Objects\ObstacleMovemnet.cs" />
-    <Compile Include="Assets\Scripts\Objects\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Objects\Player.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\AttackBird.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovemnet.cs" />
+    <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPoolManager.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Objects\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
+    <Compile Include="Assets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovement.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\Level\ObjectPool.cs" />
-    <Compile Include="Assets\Scripts\Level\LinearLine.cs" />
-    <Compile Include="Assets\Scripts\Level\RespawnerGenerator.cs" />
-    <Compile Include="Assets\Scripts\Level\DeactivateObstacle.cs" />
-    <Compile Include="Assets\Scripts\Level\Tile.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\Objects\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Level\Respawner.cs" />
+    <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Level\Map\LinearLine.cs" />
+    <Compile Include="Assets\Scripts\Level\Respawner\RespawnerGenerator.cs" />
+    <Compile Include="Assets\Scripts\Level\Respawner\DeactivateObstacle.cs" />
+    <Compile Include="Assets\Scripts\Level\Map\Tile.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\Car.cs" />
+    <Compile Include="Assets\Scripts\Interface\IMovable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
+    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Object.shader" />
+    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Global.shader" />
+    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
+    <None Include="Assets\VoxelAnimals\Documentation\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

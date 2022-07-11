@@ -11,4 +11,9 @@ public class GameManager : SingletonBase<GameManager>
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public void EndGame()
+    {
+        isGameOver = true;
+    }
 }

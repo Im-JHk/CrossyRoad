@@ -34,11 +34,11 @@ public class CameraMovement : MonoBehaviour, IMovable
         mainCamera.transform.position = playerTransform.position + cameraBaseOffset;
     }
 
-    public void Move(float moveSpeed)
+    public void Move()
     {
         //mainCamera.transform.position = mainCamera.transform.position + cameraMoveOffset;
         //mainCamera.transform.Translate(Vector3.forward * moveSpeed);
-        mainCamera.transform.position = mainCamera.transform.position + Vector3.forward * moveSpeed;
+        mainCamera.transform.position = mainCamera.transform.position + Vector3.forward * GameManager.Instance.MoveSpeed;
     }
 
     public void FollowTarget(Vector3 moveDistance, CameraFollowTarget targetType)

@@ -56,7 +56,8 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Gloomy_Animal\Script\CharacterSelect.cs" />
+    <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\CharacterSelect.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\DeadBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Level\Map\LinearLineGenerator.cs" />
     <Compile Include="Assets\Scripts\SingletonBase.cs" />
@@ -68,7 +69,9 @@
     <Compile Include="Assets\Scripts\Objects\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
-    <Compile Include="Assets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\Log.cs" />
+    <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\Floater.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovement.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPool.cs" />
@@ -76,18 +79,18 @@
     <Compile Include="Assets\Scripts\Level\Respawner\RespawnerGenerator.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Deactivater.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Car.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\Tree.cs" />
     <Compile Include="Assets\Scripts\Level\Map\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\DeadBlock.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Object.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Global.shader" />
-    <None Include="Assets\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
-    <None Include="Assets\VoxelAnimals\Documentation\ReadMe.txt" />
+    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
+    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Object.shader" />
+    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Global.shader" />
+    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
+    <None Include="Assets\AddAssets\VoxelAnimals\Documentation\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

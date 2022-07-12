@@ -23,4 +23,10 @@ public class Player : MonoBehaviour
         isAlive = true;
         transform.position = new Vector3(0f, 0f, 0f);
     }
+
+    public void OnChangeAliveState(bool b)
+    {
+        isAlive = b;
+        GameManager.Instance.GameOver(true);
+    }
 }

@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        player.transform.position = LevelManager.Instance.linearLineList[currentTile.x].TileList[currentTile.y].TileTransform + new Vector3(0f, 0.2f, 0f);
+        player.transform.position = LevelManager.Instance.linearLineList[currentTile.x].TileList[currentTile.y].TilePosition + new Vector3(0f, 0.2f, 0f);
         directionType = DirectionType.Down;
     }
 

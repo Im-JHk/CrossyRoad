@@ -4,29 +4,34 @@ using UnityEngine;
 
 public class RespawnerGenerator : MonoBehaviour
 {
-    public GameObject respawner = null;
+    [SerializeField]
+    private GameObject respawner = null;
+    [SerializeField]
+    private GameObject deactivater = null;
 
-    public Respawner GenerateRespawner(Vector3 position, ObstacleType type)
+    public GameObject GenerateRespawner(Vector3 position, ObstacleType obstacleType, ObjectPrefabType objectType, int lineIndex)
     {
-        Respawner newRespawner = new Respawner(position, type);
+        GameObject newRespawner = Instantiate(respawner);
+        newRespawner.AddComponent<Respawner>();
+        newRespawner.GetComponent<Respawner>().InitializeState(position, obstacleType, objectType, lineIndex);
+
+        //Respawner newRespawner = new Respawner(prefeb, position, obstacleType, objectType);
+
+        newRespawner.transform.position = position;
 
         return newRespawner;
     }
 
-    public Deactivater GenerateDeactivater(Vector3 position)
+    public GameObject GenerateDeactivater(Vector3 position)
     {
-        Deactivater newDeactivater = new Deactivater(position);
+        GameObject newDeactivater = Instantiate(deactivater);
+        newDeactivater.AddComponent<Deactivater>();
+        newDeactivater.GetComponent<Deactivater>().InitializeState(position);
+
+        //Deactivater newDeactivater = new Deactivater(prefeb, position);
+
+        newDeactivater.transform.position = position;
 
         return newDeactivater;
-    }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
     }
 }

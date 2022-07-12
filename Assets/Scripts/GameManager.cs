@@ -21,6 +21,7 @@ public class GameManager : SingletonBase<GameManager>
     private static readonly float moveSpeed = 0.005f;
 
     #region properties
+    public float MoveSpeed { get { return moveSpeed; } }
     public bool IsGameOver { get { return isGameOver; } private set { isGameOver = value; } }
     public bool IsMoveStart { get { return isMoveStart; } private set { isMoveStart = value; } }
     #endregion
@@ -37,8 +38,8 @@ public class GameManager : SingletonBase<GameManager>
     {
         if(isMoveStart && !isGameOver)
         {
-            deadBlock.Move(moveSpeed);
-            cameraMovement.Move(moveSpeed);
+            deadBlock.Move();
+            cameraMovement.Move();
         }
     }
 

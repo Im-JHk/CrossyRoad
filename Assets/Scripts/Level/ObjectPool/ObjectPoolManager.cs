@@ -9,7 +9,9 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
     private Dictionary<ObjectPrefabType, ObjectPool> objectPoolDictionary;
     private Dictionary<ObjectPrefabType, GameObject> poolDictionary;
 
-    private static readonly int poolInitailSize = 10;
+    private static readonly int poolInitailSize = 20;
+
+    public Dictionary<ObjectPrefabType, ObjectPool> ObjectPoolDictionary { get { return objectPoolDictionary; } }
 
     void Awake()
     {
@@ -24,6 +26,8 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
             InitializePoolDictionary(prefabList[(int)type], type);
             InitializeObjectPool(prefabList[(int)type], type);
         }
+        print("count: " + objectPoolDictionary.Count);
+        //print(System.Enum. ObjectPrefabType)
     }
 
     private void InitializePoolDictionary(GameObject prefab, ObjectPrefabType type)

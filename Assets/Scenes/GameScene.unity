@@ -184,7 +184,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26904610d7cb787438869c3ecab37cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawner: {fileID: 0}
+  respawner: {fileID: 2699869060510325058, guid: a8c6ba6641364084fb42000b1fbc6012,
+    type: 3}
+  deactivater: {fileID: 2699869060510325058, guid: e590f337f8a561c46a103e640226374e,
+    type: 3}
 --- !u!1 &67762959
 GameObject:
   m_ObjectHideFlags: 0

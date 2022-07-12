@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Car : Obstacle, IMovable
 {
+    private float moveSpeed;
 
-    void Start()
+    private void FixedUpdate()
     {
-        
+        Move();
     }
 
-    void Update()
+    public override void InitializeState(Vector3 position)
     {
-        
+        moveSpeed = Random.Range(1f, 3f);
+        transform.position = position;
     }
 
-    public void Move(float moveSpeed)
+    public void Move()
     {
-
+        transform.Translate(Vector3.forward * moveSpeed);
     }
 }

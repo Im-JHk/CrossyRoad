@@ -15,7 +15,7 @@ public class LinearLineGenerator : MonoBehaviour
     public static readonly float moveOnePoint = 1.0f;
     public static readonly float moveHalfPoint = 0.5f;
     public static readonly float tileSizeX = 1.0f;
-    public static readonly int maxTile = (int)lineWidth;
+    public static readonly int maxTile = (int)(lineWidth * tileSizeX);
     public static readonly int maxHalfTile = (int)(lineWidth * 0.5f);
 
     public LinearLine GenerateLine()

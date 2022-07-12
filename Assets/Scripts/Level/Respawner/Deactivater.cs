@@ -10,7 +10,12 @@ public class Deactivater : MonoBehaviour
     public Vector3 WorldPosition { get { return worldPosition; } private set { worldPosition = value; } }
     #endregion
 
-    public Deactivater(Vector3 position)
+    public Deactivater(GameObject prefeb, Vector3 position)
+    {
+        worldPosition = position;
+    }
+
+    public void InitializeState(Vector3 position)
     {
         worldPosition = position;
     }
@@ -20,6 +25,8 @@ public class Deactivater : MonoBehaviour
         if (other.CompareTag("AttackObstacle"))
         {
             print("충돌 -> 비활성화");
+            print(other.gameObject);
+            print(other);
         }
     }
 }

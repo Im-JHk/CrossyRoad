@@ -27,17 +27,20 @@ public class ObjectPool : MonoBehaviour
 
     public GameObject BorrowObject()
     {
+        print("brr1");
         GameObject spawnObject;
         if (objectQueue.Count > 0)
         {
             spawnObject = objectQueue.Dequeue();
+            print("brr2");
         }
         else
         {
             spawnObject = CreateNewObject();
+            print("brr3");
         }
         spawnObject.SetActive(true);
-
+        print("brr4");
         return spawnObject;
     }
 

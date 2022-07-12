@@ -5,17 +5,15 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     private GameObject obstacleObject = null;
-    //private ObstacleMovement obstacleMovement = null;
     private ObstacleType obstacleType;
     private ObjectPrefabType objectType;
-    //private bool isMovable;
+    private int positionIndex;
 
     #region properties
     public GameObject ObstacleObject { get { return obstacleObject; } private set { obstacleObject = value; } }
-    //public ObstacleMovement ObstacleMovement { get { return obstacleMovement; } private set { obstacleMovement = value; } }
     public ObstacleType ObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
     public ObjectPrefabType ObjectType { get { return objectType; } private set { objectType = value; } }
-    //public bool IsMovable { get { return isMovable; } private set { isMovable = value; } }
+    public int PositionIndex { get { return positionIndex; } private set { positionIndex = value; } }
     #endregion
 
     public Obstacle()
@@ -23,16 +21,11 @@ public class Obstacle : MonoBehaviour
 
     }
 
-    public Obstacle(GameObject obj, ObstacleType obstacleType, ObjectPrefabType objectType, Vector3 position, bool move)
+    public Obstacle(GameObject obj, ObstacleType obstacleType, ObjectPrefabType objectType, Vector3 position)
     {
-        //if (move)
-        //{
-        //    obstacleMovement = GetComponent<ObstacleMovement>();
-        //}
         obstacleObject = obj;
         this.obstacleType = obstacleType;
         this.objectType = objectType;
-        //isMovable = move;
         transform.position = position;
     }
 
@@ -42,6 +35,16 @@ public class Obstacle : MonoBehaviour
         {
             ObjectActiveState();
         }
+    }
+
+    public virtual void InitializeState()
+    {
+
+    }
+
+    public virtual void InitializeState(Vector3 position)
+    {
+
     }
 
     public void ObjectActiveState()

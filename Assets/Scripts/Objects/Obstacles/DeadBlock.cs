@@ -23,15 +23,14 @@ public class DeadBlock : MonoBehaviour, IMovable
     {
         if (other.CompareTag("Player"))
         {
-            print("GameOver From DeadBlock");
             GameManager.Instance.GameOver(true);
             GameManager.Instance.OnDieFromDeadBlock();
         }
     }
 
-    public void Move(float moveSpeed)
+    public void Move()
     {
-        transform.Translate(Vector3.forward * moveSpeed);
+        transform.Translate(Vector3.forward * GameManager.Instance.MoveSpeed);
     }
 
     public void FollowTargetMove(Vector3 moveDistance)

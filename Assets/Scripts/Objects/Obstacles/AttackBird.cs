@@ -14,7 +14,7 @@ public class AttackBird : MonoBehaviour, IMovable
         
     }
 
-    public void Move(float moveSpeed)
+    public void Move()
     {
 
     }

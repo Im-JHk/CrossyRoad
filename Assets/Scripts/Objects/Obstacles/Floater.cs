@@ -12,7 +12,7 @@ public class Floater : Obstacle
         transform.position = position;
     }
 
-    public override void SetPositionAsTileIndex(int index)
+    public void SetPositionAsTileIndex(int index)
     {
         positionIndex = index;
     }

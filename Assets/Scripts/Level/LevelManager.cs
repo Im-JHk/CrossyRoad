@@ -6,7 +6,6 @@ public enum LinearLineType
 {
     Grass = 0,
     Road,
-    Rail,
     Water
 }
 public enum ObstacleType
@@ -89,8 +88,10 @@ public class LevelManager : SingletonBase<LevelManager>
     {
         Vector3 respawnerPosition;
         Vector3 deactivaterPosition;
-        ObstacleType obstacleType = (ObstacleType)linearLineList[lineIndex].LineType;
+        ObstacleType obstacleType = 0;// = (ObstacleType)linearLineList[lineIndex].LineType;
         ObjectPrefabType objectType;
+        DirectionType direction;
+        float rotateAngle = 0f;
         int randNumberForType = 0;
         int randNumberForDirection = Random.Range(0, 2);
 
@@ -98,15 +99,18 @@ public class LevelManager : SingletonBase<LevelManager>
         {
             case LinearLineType.Grass:
                 randNumberForType = Random.Range(0, 2);
+                obstacleType = ObstacleType.Tree;
                 break;
             case LinearLineType.Road:
                 randNumberForType = Random.Range(2, 4);
+                obstacleType = ObstacleType.Car;
                 break;
             case LinearLineType.Water:
                 randNumberForType = Random.Range(4, 6);
                 obstacleType = (ObstacleType)randNumberForType;
                 break;
             default:
+                print("default");
                 break;
         }
         objectType = (ObjectPrefabType)randNumberForType;
@@ -121,18 +125,23 @@ public class LevelManager : SingletonBase<LevelManager>
         //    obstacleType = (ObstacleType)linearLineList[lineIndex].LineType;
         //}
 
+        // L = 0, R = 1
         if (randNumberForDirection == 0)
         {
             respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
             deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+            direction = DirectionType.Right;
+            rotateAngle = 90f;
         }
         else
         {
             respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
             deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+            direction = DirectionType.Left;
+            rotateAngle = -90f;
         }
 
-        respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, lineIndex));
+        respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, direction, rotateAngle, lineIndex));
         deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition));
     }
 

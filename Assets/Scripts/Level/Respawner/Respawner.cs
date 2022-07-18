@@ -9,7 +9,9 @@ public class Respawner : MonoBehaviour
     private Vector3 worldPosition;
     private ObstacleType obstacleType;
     private ObjectPrefabType objectType;
+    private DirectionType respawnDirection;
     private float elapsedTime = 0f;
+    private float respawnRotationAngle = 0f;
     private int lineIndex;
 
     private float respawnDelay = 0f;
@@ -51,11 +53,14 @@ public class Respawner : MonoBehaviour
         //}
     }
 
-    public void InitializeState(Vector3 position, ObstacleType obstacleType, ObjectPrefabType objectType, int lineIndex)
+    public void InitializeState(Vector3 position, ObstacleType obstacleType, ObjectPrefabType objectType, DirectionType direction, float rotateAngle, int lineIndex)
     {
+        transform.position = position;
         worldPosition = position;
         this.obstacleType = obstacleType;
         this.objectType = objectType;
+        this.respawnDirection = direction;
+        this.respawnRotationAngle = rotateAngle;
         this.lineIndex = lineIndex;
         respawnDelay = Random.Range(2.5f, 5f);
     }
@@ -67,8 +72,11 @@ public class Respawner : MonoBehaviour
             print("coroutine");
             switch (obstacleType)
             {
-                case ObstacleType.Car: case ObstacleType.Log:
-                    SetDynamicObstacle();
+                case ObstacleType.Car:
+                    SetCarObstacle();
+                    break;
+                case ObstacleType.Log:
+                    SetLogObstacle();
                     break;
                 case ObstacleType.Tree:
                     SetTreeObstacle();
@@ -83,7 +91,7 @@ public class Respawner : MonoBehaviour
 
     public void SetTreeObstacle()
     {
-        int randIndex = 0; Random.Range(0, LinearLineGenerator.maxTile);
+        int randIndex = 0; //Random.Range(0, LinearLineGenerator.maxTile);
         GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
         List<int> existNumber = new List<int>();
 
@@ -102,20 +110,11 @@ public class Respawner : MonoBehaviour
 
         foreach(var value in existNumber)
         {
-            if()
+            //if()
         }
 
         newObject.transform.position = LevelManager.Instance.linearLineList[lineIndex].TileList[randIndex].TilePosition;
         newObject.GetComponent<Tree>().SetPositionAsTileIndex(randIndex);
-
-        if (obstacleType == ObstacleType.Tree)
-        {
-            newObject.GetComponent<Tree>().SetPositionAsTileIndex(randIndex);
-        }
-        else if(obstacleType == ObstacleType.Floater)
-        {
-            newObject.GetComponent<Floater>().SetPositionAsTileIndex(randIndex);
-        }
         
         obstacleQueue.Enqueue(newObject);
     }
@@ -124,17 +123,31 @@ public class Respawner : MonoBehaviour
     {
         int randIndex = Random.Range(0, LinearLineGenerator.maxTile);
         GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
+        //GameObject prefab = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
+        newObject.GetComponent<Floater>().SetPositionAsTileIndex(randIndex);
+        //newObject.GetComponent
 
         newObject.transform.position = LevelManager.Instance.linearLineList[lineIndex].TileList[randIndex].TilePosition;
-        newObject.GetComponent<Floater>().SetPositionAsTileIndex(randIndex);
+        //newObject.transform.rotation = Quaternion.LookRotation()
 
         obstacleQueue.Enqueue(newObject);
     }
 
 
-    public void SetDynamicObstacle()
+    public void SetLogObstacle()
     {
         GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
+        //newObject.GetComponent<Log>().InitializeState();
+        //newObject.transform.Rotate(Vector3.up * respawnRotationAngle);
+        obstacleQueue.Enqueue(newObject);
+    }
+
+    public void SetCarObstacle()
+    {
+        GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
+        print(newObject);
+        newObject.GetComponent<Car>().InitializeState(transform.position, respawnDirection, respawnRotationAngle);
+        //newObject.transform.Rotate(Vector3.up * respawnRotationAngle);
         obstacleQueue.Enqueue(newObject);
     }
 }

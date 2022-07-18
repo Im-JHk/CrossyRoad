@@ -9,11 +9,11 @@ public class Tree : Obstacle
 
     public override void InitializeState(Vector3 position)
     {
-        base.InitializeState();
+        //base.InitializeState();
         transform.position = position;
     }
 
-    public override void SetPositionAsTileIndex(int index)
+    public void SetPositionAsTileIndex(int index)
     {
         positionIndex = index;
     }

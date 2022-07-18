@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4095357912128358}
   - component: {fileID: 33873127832287718}
   - component: {fileID: 23236779698540612}
+  - component: {fileID: 645951952223664811}
   m_Layer: 0
   m_Name: Prefab_Floater
-  m_TagString: Untagged
+  m_TagString: PropObstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &645951952223664811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604589689298214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea42fe61492df842b2017074784a749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -47,6 +47,11 @@ public class Obstacle : MonoBehaviour
 
     }
 
+    public virtual void InitializeState(Vector3 position, DirectionType direction, float rotateAngle)
+    {
+        print("parent");
+    }
+
     public void ObjectActiveState()
     {
         switch (obstacleType)

@@ -23,10 +23,11 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
     {
         foreach (ObjectPrefabType type in System.Enum.GetValues(typeof(ObjectPrefabType)))
         {
+            print("type: " + type);
+            print(prefabList[(int)type]);
             InitializePoolDictionary(prefabList[(int)type], type);
             InitializeObjectPool(prefabList[(int)type], type);
         }
-        print("count: " + objectPoolDictionary.Count);
         //print(System.Enum. ObjectPrefabType)
     }
 

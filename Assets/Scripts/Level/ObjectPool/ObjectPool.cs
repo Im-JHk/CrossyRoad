@@ -31,11 +31,9 @@ public class ObjectPool : MonoBehaviour
         if (objectQueue.Count > 0)
         {
             spawnObject = objectQueue.Dequeue();
-            print(objectType + "deq after: " + objectQueue.Count);
         }
         else
         {
-            print("Create new " + objectType);
             spawnObject = CreateNewObject();
         }
         spawnObject.SetActive(true);
@@ -46,6 +44,5 @@ public class ObjectPool : MonoBehaviour
     {
         obj.SetActive(false);
         objectQueue.Enqueue(obj);
-        print(objectType + "enq after: " + objectQueue.Count);
     }
 }

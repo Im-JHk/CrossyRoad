@@ -36,6 +36,15 @@ public class RespawnerGenerator : MonoBehaviour
         return newDeactivater;
     }
 
+    public GameObject GenerateDeactivater(Vector3 position, ObjectPrefabType objectType, float rotateAngle)
+    {
+        GameObject newDeactivater = Instantiate(deactivater);
+        newDeactivater.GetComponent<Deactivater>().InitializeState(position, objectType, rotateAngle);
+        newDeactivater.transform.position = position;
+
+        return newDeactivater;
+    }
+
     public void SetStaticObstacle(Vector3 position, ObjectPrefabType objectType)
     {
 

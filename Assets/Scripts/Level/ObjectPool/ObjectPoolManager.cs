@@ -26,7 +26,6 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
             InitializePoolDictionary(prefabList[(int)type], type);
             InitializeObjectPool(prefabList[(int)type], type);
         }
-        //print(System.Enum. ObjectPrefabType)
     }
 
     private void InitializePoolDictionary(GameObject prefab, ObjectPrefabType type)

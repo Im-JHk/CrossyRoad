@@ -18,7 +18,7 @@ public class Log : Obstacle, IMovable
     {
         this.rigidbody = GetComponent<Rigidbody>();
         this.moveSpeed = moveSpeed;
-        this.transform.position = position - new Vector3(0f, 0.7f, 0f);
+        this.transform.position = position - new Vector3(0f, 0.6f, 0f);
         this.moveDirectionAngle = rotateAngle;
         this.moveDirection = direction;
         this.transform.Rotate(Vector3.up * rotateAngle);

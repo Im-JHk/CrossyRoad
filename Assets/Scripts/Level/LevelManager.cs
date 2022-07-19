@@ -139,7 +139,7 @@ public class LevelManager : SingletonBase<LevelManager>
             }
 
             respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, direction, rotateAngle, lineIndex));
-            deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType));
+            deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType, -rotateAngle));
         }
     }
 

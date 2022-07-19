@@ -53,12 +53,9 @@ public class LevelManager : SingletonBase<LevelManager>
         {
             AddLinearLine();
         }
-        for (int i = 0; i < linearLineList.Count; ++i)
+        for (int i = 1; i < linearLineList.Count; ++i)
         {
-            if (linearLineList[i].LineType != LinearLineType.Grass)
-            {
-                AddRespawnerAndDeactivater(i);
-            }
+            SetRespawner(i);
         }
     }
 
@@ -84,11 +81,11 @@ public class LevelManager : SingletonBase<LevelManager>
         
     }
 
-    public void AddRespawnerAndDeactivater(int lineIndex)
+    public void SetRespawner(int lineIndex)
     {
         Vector3 respawnerPosition;
         Vector3 deactivaterPosition;
-        ObstacleType obstacleType = 0;// = (ObstacleType)linearLineList[lineIndex].LineType;
+        ObstacleType obstacleType = 0;
         ObjectPrefabType objectType;
         DirectionType direction;
         float rotateAngle = 0f;
@@ -115,34 +112,35 @@ public class LevelManager : SingletonBase<LevelManager>
         }
         objectType = (ObjectPrefabType)randNumberForType;
 
-        //if (linearLineList[lineIndex].LineType == LinearLineType.Water)
-        //{
-        //    obstacleType = (ObstacleType)Random.Range(4, 6);
-        //    objectType = (ObjectPrefabType)Random.Range(4, 6);
-        //}
-        //else
-        //{
-        //    obstacleType = (ObstacleType)linearLineList[lineIndex].LineType;
-        //}
-
-        // L = 0, R = 1
-        if (randNumberForDirection == 0)
+        if(obstacleType == ObstacleType.Tree || obstacleType == ObstacleType.Floater)
         {
-            respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
-            deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
-            direction = DirectionType.Right;
-            rotateAngle = 90f;
+            respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);
+            deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);
+
+            respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, lineIndex));
+            deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType));
         }
         else
         {
-            respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
-            deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
-            direction = DirectionType.Left;
-            rotateAngle = -90f;
-        }
+            // Direction: L = 0, R = 1
+            if (randNumberForDirection == 0)
+            {
+                respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+                deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+                direction = DirectionType.Right;
+                rotateAngle = 90f;
+            }
+            else
+            {
+                respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+                deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.lineHeight, 0f);
+                direction = DirectionType.Left;
+                rotateAngle = -90f;
+            }
 
-        respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, direction, rotateAngle, lineIndex));
-        deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition));
+            respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, direction, rotateAngle, lineIndex));
+            deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType));
+        }
     }
 
     private void OnDrawGizmos()

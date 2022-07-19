@@ -9,7 +9,6 @@ public class Tree : Obstacle
 
     public override void InitializeState(Vector3 position)
     {
-        //base.InitializeState();
         transform.position = position;
     }
 

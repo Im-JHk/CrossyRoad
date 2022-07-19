@@ -7,13 +7,11 @@ public class Obstacle : MonoBehaviour
     private GameObject obstacleObject = null;
     private ObstacleType obstacleType;
     private ObjectPrefabType objectType;
-    private int positionIndex;
 
     #region properties
     public GameObject ObstacleObject { get { return obstacleObject; } private set { obstacleObject = value; } }
     public ObstacleType ObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
     public ObjectPrefabType ObjectType { get { return objectType; } private set { objectType = value; } }
-    public int PositionIndex { get { return positionIndex; } private set { positionIndex = value; } }
     #endregion
 
     public Obstacle()
@@ -23,10 +21,10 @@ public class Obstacle : MonoBehaviour
 
     public Obstacle(GameObject obj, ObstacleType obstacleType, ObjectPrefabType objectType, Vector3 position)
     {
-        obstacleObject = obj;
+        this.obstacleObject = obj;
         this.obstacleType = obstacleType;
         this.objectType = objectType;
-        transform.position = position;
+        this.transform.position = position;
     }
 
     void Update()
@@ -39,17 +37,17 @@ public class Obstacle : MonoBehaviour
 
     public virtual void InitializeState()
     {
-
+        print("InitializeState0 Parent");
     }
 
     public virtual void InitializeState(Vector3 position)
     {
-
+        print("InitializeState1 Parent");
     }
 
-    public virtual void InitializeState(Vector3 position, DirectionType direction, float rotateAngle)
+    public virtual void InitializeState(Vector3 position, DirectionType direction, float rotateAngle, float moveSpeed)
     {
-        print("parent");
+        print("InitializeState4 Parent");
     }
 
     public void ObjectActiveState()

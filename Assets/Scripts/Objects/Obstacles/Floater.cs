@@ -9,7 +9,7 @@ public class Floater : Obstacle
 
     public override void InitializeState(Vector3 position)
     {
-        transform.position = position;
+        transform.position = position + new Vector3(0f, 0.15f, 0f);
     }
 
     public void SetPositionAsTileIndex(int index)

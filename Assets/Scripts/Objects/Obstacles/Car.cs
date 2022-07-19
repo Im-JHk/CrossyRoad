@@ -14,22 +14,22 @@ public class Car : Obstacle, IMovable
         Move();
     }
 
-    public override void InitializeState(Vector3 position, DirectionType direction, float rotateAngle)
+    public override void InitializeState(Vector3 position, DirectionType direction, float rotateAngle, float moveSpeed)
     {
-        rigidbody = GetComponent<Rigidbody>();
-        moveSpeed = Random.Range(0.01f, 0.03f);
-        transform.position = position;
-        moveDirectionAngle = rotateAngle;
-        moveDirection = direction;
-        transform.Rotate(Vector3.up * rotateAngle);
+        this.rigidbody = GetComponent<Rigidbody>();
+        this.moveSpeed = moveSpeed;
+        this.transform.position = position - new Vector3(0f, 0.5f, 0f);
+        this.moveDirectionAngle = rotateAngle;
+        this.moveDirection = direction;
+        this.transform.Rotate(Vector3.up * rotateAngle);
 
         if (moveDirection == DirectionType.Left)
         {
-            rigidbody.velocity = Vector3.left * moveSpeed;
+            this.rigidbody.velocity = Vector3.left * moveSpeed;
         }
         else if (moveDirection == DirectionType.Right)
         {
-            rigidbody.velocity = Vector3.right * moveSpeed;
+            this.rigidbody.velocity = Vector3.right * moveSpeed;
         }
     }
 
@@ -37,13 +37,13 @@ public class Car : Obstacle, IMovable
     {
         if(moveDirection == DirectionType.Left)
         {
-            rigidbody.velocity = Vector3.left * moveSpeed;
+            this.rigidbody.velocity = Vector3.left * moveSpeed;
         }
         else if(moveDirection == DirectionType.Right)
         {
-            rigidbody.velocity = Vector3.right * moveSpeed;
+            this.rigidbody.velocity = Vector3.right * moveSpeed;
         }
-        
-        transform.Translate(Vector3.forward * moveSpeed);
+
+        this.transform.Translate(Vector3.forward * moveSpeed);
     }
 }

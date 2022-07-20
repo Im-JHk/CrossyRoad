@@ -59,15 +59,19 @@ public class Respawner : MonoBehaviour
         this.lineIndex = lineIndex;
         respawnDelay = Random.Range(3f, 6f);
 
-        if (obstacleType == ObstacleType.Car || obstacleType == ObstacleType.Log)
+        if (obstacleType == ObstacleType.Car)
         {
-            ObstacleMoveSpeed = Random.Range(0.03f, 0.1f);
+            ObstacleMoveSpeed = Random.Range(1.5f, 3.5f);
+        }
+        else if(obstacleType == ObstacleType.Log)
+        {
+            ObstacleMoveSpeed = Random.Range(1f, 2f);
         }
     }
 
     public IEnumerator RespawnObstacle()
     {
-        while (!GameManager.Instance.IsGameOver)
+        while (!GameManager.Instance.IsGameOver && lineIndex != 0)
         {
             switch (obstacleType)
             {
@@ -90,27 +94,28 @@ public class Respawner : MonoBehaviour
 
     public void SetTreeObstacle()
     {
-        int randCount = Random.Range(0, randomCountMax);
+        int randCount = Random.Range(1, randomCountMax);
         List<int> randomNumber = CommonUtility.RandomInt(0, LinearLineGenerator.maxTile - 1, randCount);
 
         for (int i = 0; i < randomNumber.Count; ++i)
         {
             GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
-            newObject.transform.position = LevelManager.Instance.linearLineList[lineIndex].TileList[randomNumber[i]].TilePosition;
+            newObject.transform.position = LevelManager.Instance.LinearLineList[lineIndex].TileList[randomNumber[i]].TilePosition;
             newObject.GetComponent<Tree>().SetPositionAsTileIndex(randomNumber[i]);
+            LevelManager.Instance.LinearLineList[lineIndex].TileList[randomNumber[i]].SetCanMove(false);
             obstacleQueue.Enqueue(newObject);
         }
     }
 
     public void SetFloaterObstacle()
     {
-        int randCount = Random.Range(0, randomCountMax);
+        int randCount = Random.Range(1, randomCountMax);
         List<int> randomNumber = CommonUtility.RandomInt(0, LinearLineGenerator.maxTile - 1, randCount);
 
         for (int i = 0; i < randomNumber.Count; ++i)
         {
             GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();
-            newObject.transform.position = LevelManager.Instance.linearLineList[lineIndex].TileList[randomNumber[i]].TilePosition;
+            newObject.transform.position = LevelManager.Instance.LinearLineList[lineIndex].TileList[randomNumber[i]].TilePosition;
             newObject.GetComponent<Floater>().SetPositionAsTileIndex(randomNumber[i]);
             obstacleQueue.Enqueue(newObject);
         }

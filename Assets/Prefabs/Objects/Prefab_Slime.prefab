@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 505003064397726316}
   m_Layer: 0
   m_Name: Prefab_Slime
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,8 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7161440d55d844f91073d983a07f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1 &1159745215084782
 GameObject:
   m_ObjectHideFlags: 0

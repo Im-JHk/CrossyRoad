@@ -29,22 +29,26 @@ public enum ObjectPrefabType
 
 public class LevelManager : SingletonBase<LevelManager>
 {
-    public ObjectPool objectPool = null;
-    public LinearLineGenerator lineGenerator = null;
-    public RespawnerGenerator respawnerGenerator = null;
-    public List<LinearLine> linearLineList;
-    //public List<Respawner> respawnerList;
-    //public List<Deactivater> deactivaterList;
-    public List<GameObject> respawnerList;
-    public List<GameObject> deactivaterList;
+    private ObjectPool objectPool = null;
+    private LinearLineGenerator lineGenerator = null;
+    private RespawnerGenerator respawnerGenerator = null;
+    private List<LinearLine> linearLineList = null;
+    private List<GameObject> respawnerList = null;
+    private List<GameObject> deactivaterList = null;
+
+    #region properties
+    public LinearLineGenerator LineGenerator { get { return lineGenerator; } private set { lineGenerator = value; } }
+    public RespawnerGenerator RespawnerGenerator { get { return respawnerGenerator; } private set { respawnerGenerator = value; } }
+    public List<LinearLine> LinearLineList { get { return linearLineList; } private set { linearLineList = value; } }
+    public List<GameObject> RespawnerList { get { return respawnerList; } private set { respawnerList = value; } }
+    public List<GameObject> DeactivaterList { get { return deactivaterList; } private set { deactivaterList = value; } }
+    #endregion
 
     void Awake()
     {
         lineGenerator = GetComponentInChildren<LinearLineGenerator>();
         respawnerGenerator = GetComponentInChildren<RespawnerGenerator>();
         linearLineList = new List<LinearLine>();
-        //respawnerList = new List<Respawner>();
-        //deactivaterList = new List<Deactivater>();
         respawnerList = new List<GameObject>();
         deactivaterList = new List<GameObject>();
 
@@ -145,25 +149,34 @@ public class LevelManager : SingletonBase<LevelManager>
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(255f, 255f, 255f, 255f);
-        for (int i = 0; i < linearLineList.Count; ++i)
+        if (linearLineList != null)
         {
-            for (int j = 0; j < linearLineList[i].TileList.Count; ++j)
+            Gizmos.color = new Color(255f, 255f, 255f, 255f);
+            for (int i = 0; i < linearLineList.Count; ++i)
             {
-                Gizmos.DrawWireCube(linearLineList[i].TileList[j].TilePosition, new Vector3(LinearLineGenerator.moveOnePoint - 0.01f, 0f, LinearLineGenerator.lineDepth - 0.01f));
+                for (int j = 0; j < linearLineList[i].TileList.Count; ++j)
+                {
+                    Gizmos.DrawWireCube(linearLineList[i].TileList[j].TilePosition, new Vector3(LinearLineGenerator.moveOnePoint - 0.01f, 0f, LinearLineGenerator.lineDepth - 0.01f));
+                }
+            }
+        }
+        
+        if(respawnerList != null)
+        {
+            Gizmos.color = new Color(0f, 0f, 255f, 255f);
+            for (int i = 0; i < respawnerList.Count; ++i)
+            {
+                Gizmos.DrawWireCube(respawnerList[i].transform.position, new Vector3(1f, 1f, 0.99f));
             }
         }
 
-        Gizmos.color = new Color(0f, 0f, 255f, 255f);
-        for (int i = 0; i < respawnerList.Count; ++i)
+        if(deactivaterList != null)
         {
-            Gizmos.DrawWireCube(respawnerList[i].transform.position, new Vector3(1f, 1f, 0.99f));
-        }
-
-        Gizmos.color = new Color(255f, 0f, 0f, 255f);
-        for (int i = 0; i < deactivaterList.Count; ++i)
-        {
-            Gizmos.DrawWireCube(deactivaterList[i].transform.position, new Vector3(1f, 1f, 0.99f));
+            Gizmos.color = new Color(255f, 0f, 0f, 255f);
+            for (int i = 0; i < deactivaterList.Count; ++i)
+            {
+                Gizmos.DrawWireCube(deactivaterList[i].transform.position, new Vector3(1f, 1f, 0.99f));
+            }
         }
     }
 }

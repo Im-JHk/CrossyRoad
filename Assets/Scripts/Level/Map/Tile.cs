@@ -20,4 +20,9 @@ public class Tile : MonoBehaviour
         tileColumnIndex = column;
         this.canMove = canMove;
     }
+
+    public void SetCanMove(bool b)
+    {
+        canMove = b;
+    }
 }

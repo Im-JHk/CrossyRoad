@@ -13,14 +13,22 @@ public enum DirectionType
 
 public class GameManager : SingletonBase<GameManager>
 {
+    [SerializeField]
+    private Player player = null;
+    [SerializeField]
     private CameraMovement cameraMovement = null;
+    [SerializeField]
     private DeadBlock deadBlock = null;
+    [SerializeField]
+    private GameObject attackBird = null;
+
     private bool isGameOver = false;
     private bool isMoveStart = false;
 
     private static readonly float moveSpeed = 0.005f;
 
     #region properties
+    public Player GetPlayer { get { return player; } }
     public float MoveSpeed { get { return moveSpeed; } }
     public bool IsGameOver { get { return isGameOver; } private set { isGameOver = value; } }
     public bool IsMoveStart { get { return isMoveStart; } private set { isMoveStart = value; } }
@@ -89,6 +97,8 @@ public class GameManager : SingletonBase<GameManager>
 
     public void OnDieFromDeadBlock()
     {
+        attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[ObjectPrefabType.AttackBird].BorrowObject();
+        attackBird.GetComponent<AttackBird>().SetInitialize();
 
     }
 }

@@ -27,6 +27,8 @@ public class CameraMovement : MonoBehaviour, IMovable
 
     private static readonly float maxMoveTime = 0.2f;
 
+    public Camera MainCamera { get { return mainCamera; } private set { mainCamera = value; } }
+
     void Start()
     {
         cameraFollowTarget = CameraFollowTarget.Player;

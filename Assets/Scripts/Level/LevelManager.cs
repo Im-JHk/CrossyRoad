@@ -24,7 +24,8 @@ public enum ObjectPrefabType
     Car1,
     Car2,
     Floater,
-    Log
+    Log,
+    AttackBird
 }
 
 public class LevelManager : SingletonBase<LevelManager>

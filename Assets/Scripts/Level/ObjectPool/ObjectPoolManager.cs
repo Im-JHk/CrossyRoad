@@ -9,7 +9,8 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
     private Dictionary<ObjectPrefabType, ObjectPool> objectPoolDictionary;
     private Dictionary<ObjectPrefabType, GameObject> poolDictionary;
 
-    private static readonly int poolInitailSize = 20;
+    private static readonly int poolInitialDefaultSize = 20;
+    private static readonly int poolInitialOneSize = 1;
 
     public Dictionary<ObjectPrefabType, ObjectPool> ObjectPoolDictionary { get { return objectPoolDictionary; } }
 
@@ -36,7 +37,14 @@ public class ObjectPoolManager : SingletonBase<ObjectPoolManager>
     private void InitializeObjectPool(GameObject prefab, ObjectPrefabType type)
     {
         ObjectPool newObjectPool = new ObjectPool();
-        newObjectPool.InitalizePool(prefab, type, poolInitailSize);
+        if(type == ObjectPrefabType.AttackBird)
+        {
+            newObjectPool.InitalizePool(prefab, type, poolInitialOneSize);
+        }
+        else
+        {
+            newObjectPool.InitalizePool(prefab, type, poolInitialDefaultSize);
+        }
         objectPoolDictionary.Add(type, newObjectPool);
     }
 }

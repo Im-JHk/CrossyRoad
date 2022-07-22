@@ -19,15 +19,6 @@ public class DeadBlock : MonoBehaviour, IMovable
         transform.position = new Vector3(0f, 1f, 0f);
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            GameManager.Instance.GameOver(true);
-            GameManager.Instance.OnDieFromDeadBlock();
-        }
-    }
-
     public void Move()
     {
         transform.Translate(Vector3.forward * GameManager.Instance.MoveSpeed);
@@ -55,8 +46,12 @@ public class DeadBlock : MonoBehaviour, IMovable
         yield break;
     }
 
-    private void OnDrawGizmos()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            GameManager.Instance.GameOver(true);
+            GameManager.Instance.OnDieFromDeadBlock();
+        }
     }
 }

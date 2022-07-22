@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Player player = null;
     private PlayerController playerController = null;
-    private Animator animator;
+    //private Animator animator;
 
     private Vector3 direction;
     private Vector2Int currentTile;
@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponentInParent<Player>();
         playerController = GetComponent<PlayerController>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
         currentTile = new Vector2Int(0, LinearLineGenerator.maxHalfTile);
     }
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         Quaternion startRotation = player.transform.rotation;
 
         isMove = true;
-        animator.SetBool("OnMove", true);
+        player.PlayerAnimator.SetBool("OnMove", true);
 
         while (elapsedMoveTime < maxMoveTime)
         {
@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
 
         canMove = false;
         isMove = false;
-        animator.SetBool("OnMove", false);
+        player.PlayerAnimator.SetBool("OnMove", false);
 
         GameManager.Instance.PlayerMove(player.transform.position, targetPosition - startPosition, directionType);
 

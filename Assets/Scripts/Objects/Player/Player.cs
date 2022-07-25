@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     public void OnChangeAliveState(bool b)
     {
         isAlive = b;
-        GameManager.Instance.GameOver(true);
+        GameManager.Instance.GameOver();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         {
             isAlive = false;
             playerAnimator.SetTrigger("OnDie");
-            GameManager.Instance.GameOver(true);
+            GameManager.Instance.GameOver();
         }
     }
 }

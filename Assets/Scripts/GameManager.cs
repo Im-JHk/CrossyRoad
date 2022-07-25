@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum DirectionType
 {
@@ -18,11 +17,14 @@ public class GameManager : SingletonBase<GameManager>
     [SerializeField]
     private CameraMovement cameraMovement = null;
     [SerializeField]
-    private DeadBlock deadBlock = null;
+    private DeadBlock deadblock = null;
     [SerializeField]
     private GameObject attackBird = null;
 
-    private bool isGameOver = false;
+    private int gameScore;
+    private int coinScore;
+
+    private bool isGameover = false;
     private bool isMoveStart = false;
 
     private static readonly float moveSpeed = 0.005f;
@@ -30,7 +32,9 @@ public class GameManager : SingletonBase<GameManager>
     #region properties
     public Player GetPlayer { get { return player; } }
     public float MoveSpeed { get { return moveSpeed; } }
-    public bool IsGameOver { get { return isGameOver; } private set { isGameOver = value; } }
+    public int GameScore { get { return gameScore; } }
+    public int CoinScore { get { return coinScore; } }
+    public bool IsGameover { get { return isGameover; } private set { isGameover = value; } }
     public bool IsMoveStart { get { return isMoveStart; } private set { isMoveStart = value; } }
     #endregion
 
@@ -39,21 +43,26 @@ public class GameManager : SingletonBase<GameManager>
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         cameraMovement = GetComponentInChildren<CameraMovement>();
-        deadBlock = GetComponentInChildren<DeadBlock>();
+        deadblock = GetComponentInChildren<DeadBlock>();
+        gameScore = 0;
+        coinScore = 0;
+        UIManager.Instance.UpdateTextGameScore(gameScore);
+        UIManager.Instance.UpdateTextCoinScore(coinScore);
     }
 
     private void FixedUpdate()
     {
-        if(isMoveStart && !isGameOver)
+        if(isMoveStart && !isGameover)
         {
-            deadBlock.Move();
+            deadblock.Move();
             cameraMovement.Move();
         }
     }
 
-    public void GameOver(bool b)
+    public void GameOver()
     {
-        isGameOver = b;
+        isGameover = true;
+        UIManager.Instance.SetActiveGameoverUI(true);
     }
 
     public void PlayerMoveStart(bool b)
@@ -70,7 +79,7 @@ public class GameManager : SingletonBase<GameManager>
         switch (directionType)
         {
             case DirectionType.Up:
-                if (deadBlock.transform.position.z <= playerPosition.z)
+                if (deadblock.transform.position.z <= playerPosition.z)
                 {
                     DeadBlockMove(moveDistance);
                 }
@@ -87,7 +96,7 @@ public class GameManager : SingletonBase<GameManager>
     public void DeadBlockMove(Vector3 moveDistance)
     {
         CameraMove(moveDistance, CameraFollowTarget.Player);
-        deadBlock.FollowTargetMove(moveDistance);
+        deadblock.FollowTargetMove(moveDistance);
     }
 
     public void CameraMove(Vector3 moveDistance, CameraFollowTarget followTarget)
@@ -100,5 +109,20 @@ public class GameManager : SingletonBase<GameManager>
         attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[ObjectPrefabType.AttackBird].BorrowObject();
         attackBird.GetComponent<AttackBird>().SetInitialize();
 
+    }
+
+    public void UpdateGameScore(int plus)
+    {
+        gameScore += plus;
+    }
+
+    public void UpdateCoinScore(int plus)
+    {
+        coinScore += plus;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

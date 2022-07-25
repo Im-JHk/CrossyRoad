@@ -71,7 +71,7 @@ public class Respawner : MonoBehaviour
 
     public IEnumerator RespawnObstacle()
     {
-        while (!GameManager.Instance.IsGameOver && lineIndex != 0)
+        while (!GameManager.Instance.IsGameover && lineIndex != 0)
         {
             switch (obstacleType)
             {

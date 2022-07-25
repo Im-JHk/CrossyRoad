@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.Instance.IsGameOver && !isMove)
+        if (!GameManager.Instance.IsGameover && !isMove)
         {
             SetMovementInfomation();
             if (canMove)

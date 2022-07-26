@@ -73,7 +73,7 @@
     <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Floater.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovement.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Etc\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Level\Map\LinearLine.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\RespawnerGenerator.cs" />
@@ -82,10 +82,10 @@
     <Compile Include="Assets\Scripts\Objects\Obstacles\Tree.cs" />
     <Compile Include="Assets\Scripts\Level\Map\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CommonUtility.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

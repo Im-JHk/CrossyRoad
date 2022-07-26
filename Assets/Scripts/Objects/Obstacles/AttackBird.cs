@@ -10,8 +10,8 @@ public class AttackBird : MonoBehaviour
     private Vector3 direction = Vector3.zero;
     private ObjectPrefabType objectType = ObjectPrefabType.AttackBird;
 
-    private float moveSpeed = 5f;
-    private float height = 5f;
+    private float moveSpeed = 0.01f;
+    private float height = 2f;
     private float activePositionZ = 5f;
 
     private bool isTakePlayer = false;

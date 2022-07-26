@@ -51,7 +51,7 @@ public class DeadBlock : MonoBehaviour, IMovable
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.OnDieFromDeadBlock();
-            GameManager.Instance.GameOver();
+            //GameManager.Instance.GameOver();
         }
     }
 }

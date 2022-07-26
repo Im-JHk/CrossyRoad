@@ -12,6 +12,7 @@ TagManager:
   - PropObstacle
   - BlockObstacle
   - AttackBird
+  - Floor
   layers:
   - Default
   - TransparentFX

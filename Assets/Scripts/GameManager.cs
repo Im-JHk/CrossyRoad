@@ -62,6 +62,8 @@ public class GameManager : SingletonBase<GameManager>
     public void GameOver()
     {
         isGameover = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
         UIManager.Instance.SetActiveGameoverUI(true);
     }
 
@@ -108,7 +110,6 @@ public class GameManager : SingletonBase<GameManager>
     {
         attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[ObjectPrefabType.AttackBird].BorrowObject();
         attackBird.GetComponent<AttackBird>().SetInitialize();
-
     }
 
     public void UpdateGameScore(int plus)

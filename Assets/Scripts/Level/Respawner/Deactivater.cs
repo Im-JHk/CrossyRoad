@@ -39,7 +39,6 @@ public class Deactivater : MonoBehaviour
         }
         else if (other.CompareTag("PropObstacle"))
         {
-            print("prop");
             other.gameObject.transform.Rotate(Vector3.up * returnRotateAngle);
             ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].ReturnObject(other.gameObject);
         }

@@ -9,27 +9,26 @@ public class AttackBird : MonoBehaviour
     private Rigidbody rigidbody = null;
     private Vector3 direction = Vector3.zero;
     private ObjectPrefabType objectType = ObjectPrefabType.AttackBird;
-
-    private float moveSpeed = 0.01f;
+    private float moveSpeed = 10f;
     private float height = 2f;
-    private float activePositionZ = 5f;
-
+    private float activePositionZ = 10f;
     private bool isTakePlayer = false;
 
-    private static readonly Vector3 riseDirection = new Vector3(0f, 1f, 2f);
+    private readonly Vector3 riseDirection = new Vector3(0f, 1f, -2f);
 
     public bool IsTakePlayer { get { return isTakePlayer; } private set { isTakePlayer = value; } }
 
     private void Awake()
     {
+        targetObject = GameObject.FindGameObjectWithTag("Player");
         rigidbody = GetComponent<Rigidbody>();
     }
 
     public void SetInitialize()
     {
-        transform.position = GameManager.Instance.GetPlayer.transform.position + new Vector3(0f, height, activePositionZ);
         if (targetObject != null)
         {
+            transform.position = targetObject.transform.position + new Vector3(0f, height, activePositionZ);
             direction = (targetObject.transform.position - transform.position).normalized;
         }
         rigidbody.velocity = direction * moveSpeed;
@@ -44,7 +43,9 @@ public class AttackBird : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            rigidbody.velocity = riseDirection * moveSpeed;
+            print("rise: " + riseDirection.normalized);
+            rigidbody.velocity = riseDirection.normalized * moveSpeed;
+            collision.rigidbody.useGravity = false;
             collision.rigidbody.velocity = rigidbody.velocity;
         }
     }

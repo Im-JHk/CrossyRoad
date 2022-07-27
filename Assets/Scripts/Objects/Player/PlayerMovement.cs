@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.Instance.IsGameover && !isMove)
+        if (GameManager.Instance.GetGameState == GameManager.GameState.Play && !isMove)
         {
             SetMovementInfomation();
             if (canMove)

@@ -25,7 +25,7 @@ public class CameraMovement : MonoBehaviour, IMovable
     private Vector3 cameraMoveOffset = new Vector3(0f, 0f, 0.005f);
     private CameraFollowTarget cameraFollowTarget;
 
-    private static readonly float maxMoveTime = 0.2f;
+    private readonly float maxMoveTime = 0.2f;
 
     public Camera MainCamera { get { return mainCamera; } private set { mainCamera = value; } }
 

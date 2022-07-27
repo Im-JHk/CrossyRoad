@@ -7,6 +7,10 @@ public class UIManager : SingletonBase<UIManager>
     [SerializeField]
     private GameObject gameoverUI;
     [SerializeField]
+    private GameObject pauseUI;
+    [SerializeField]
+    private GameObject pauseButtonUI;
+    [SerializeField]
     private Text gameScore;
     [SerializeField]
     private Text coinScore;
@@ -14,6 +18,7 @@ public class UIManager : SingletonBase<UIManager>
     void Start()
     {
         gameoverUI.SetActive(false);
+        pauseUI.SetActive(false);
     }
 
     public void UpdateTextGameScore(int score)
@@ -29,5 +34,15 @@ public class UIManager : SingletonBase<UIManager>
     public void SetActiveGameoverUI(bool active)
     {
         gameoverUI.SetActive(active);
+    }
+
+    public void SetActivePauseUI(bool active)
+    {
+        pauseUI.SetActive(active);
+    }
+
+    public void SetActivePauseButtonUI(bool active)
+    {
+        pauseButtonUI.SetActive(active);
     }
 }

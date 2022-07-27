@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CommonUtility.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
+    <Compile Include="Assets\Scripts\Objects\Obstacles\AttackBirdBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

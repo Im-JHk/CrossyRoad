@@ -336,6 +336,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &772120891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772120892}
+  - component: {fileID: 772120893}
+  - component: {fileID: 772120894}
+  m_Layer: 0
+  m_Name: AttackBirdOutBlock
+  m_TagString: AttackBirdBlock
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &772120892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772120891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1624053614}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &772120893
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772120891}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 10, z: 1}
+  m_Center: {x: 0, y: 5, z: -5}
+--- !u!114 &772120894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772120891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40208bf7e9350784f84f5cab79767716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,6 +608,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464e153064b0d6e46a6b7a85b834a8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1420147770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1215959102550975891, guid: 69508d6748c52ec409355a985a82b710,
+    type: 3}
+  m_PrefabInstance: {fileID: 6820376557568759779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1618686657
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,6 +749,7 @@ MonoBehaviour:
   player: {fileID: 1311431523}
   cameraMovement: {fileID: 0}
   deadblock: {fileID: 0}
+  attackBirdBlock: {fileID: 0}
   attackBird: {fileID: 0}
 --- !u!4 &1624053614
 Transform:
@@ -700,9 +765,16 @@ Transform:
   m_Children:
   - {fileID: 67762960}
   - {fileID: 1618686658}
+  - {fileID: 772120892}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1899962325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 249615576794733666, guid: 69508d6748c52ec409355a985a82b710,
+    type: 3}
+  m_PrefabInstance: {fileID: 6820376557568759779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6820376557568759779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -710,6 +782,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3757622993732901337, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1624053613}
+    - target: {fileID: 3757622993732901337, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GameResume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4302944601782762751, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: pauseUI
+      value: 
+      objectReference: {fileID: 1899962325}
+    - target: {fileID: 4302944601782762751, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: pauseButtonUI
+      value: 
+      objectReference: {fileID: 1420147770}
     - target: {fileID: 6572562723259814423, guid: 69508d6748c52ec409355a985a82b710,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -914,6 +1006,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646922453853200898, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1624053613}
+    - target: {fileID: 7646922453853200898, guid: 69508d6748c52ec409355a985a82b710,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GamePause
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69508d6748c52ec409355a985a82b710, type: 3}

@@ -6,7 +6,7 @@ public class DeadBlock : MonoBehaviour, IMovable
 {
     private BoxCollider boxCollider = null;
     
-    private static readonly float maxMoveTime = 0.1f;
+    private readonly float maxMoveTime = 0.1f;
 
     private void Awake()
     {

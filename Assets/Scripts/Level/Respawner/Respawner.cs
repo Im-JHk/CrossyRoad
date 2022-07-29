@@ -6,11 +6,11 @@ public class Respawner : MonoBehaviour
 {
     public Queue<GameObject> obstacleQueue;
 
+    [SerializeField]
+    private LevelManager.ObstacleType obstacleType;
+    [SerializeField]
+    private LevelManager.ObjectPoolTypeList objectType;
     private Vector3 worldPosition;
-    [SerializeField]
-    private ObstacleType obstacleType;
-    [SerializeField]
-    private ObjectPrefabType objectType;
     private DirectionType respawnDirection;
     private float respawnDelay = 0f;
     private float respawnRotationAngle = 0f;
@@ -21,8 +21,8 @@ public class Respawner : MonoBehaviour
 
     #region properties
     public Vector3 WorldPosition { get { return worldPosition; } private set { worldPosition = value; } }
-    public ObstacleType ObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
-    public ObjectPrefabType ObjectType { get { return objectType; } private set { objectType = value; } }
+    public LevelManager.ObstacleType ObstacleType { get { return obstacleType; } private set { obstacleType = value; } }
+    public LevelManager.ObjectPoolTypeList ObjectType { get { return objectType; } private set { objectType = value; } }
     #endregion
 
     void Awake()
@@ -35,11 +35,8 @@ public class Respawner : MonoBehaviour
         StartCoroutine(RespawnObstacle());
     }
 
-    void Update()
-    {
-    }
-
-    public void InitializeState(Vector3 position, ObstacleType obstacleType, ObjectPrefabType objectType, int lineIndex)
+    // Respawn StaticObject
+    public void InitializeState(Vector3 position, LevelManager.ObstacleType obstacleType, LevelManager.ObjectPoolTypeList objectType, int lineIndex)
     {
         transform.position = position;
         worldPosition = position;
@@ -48,7 +45,8 @@ public class Respawner : MonoBehaviour
         this.lineIndex = lineIndex;
     }
 
-    public void InitializeState(Vector3 position, ObstacleType obstacleType, ObjectPrefabType objectType, DirectionType direction, float rotateAngle, int lineIndex)
+    // Respawn MovableObject
+    public void InitializeState(Vector3 position, LevelManager.ObstacleType obstacleType, LevelManager.ObjectPoolTypeList objectType, DirectionType direction, float rotateAngle, int lineIndex)
     {
         transform.position = position;
         worldPosition = position;
@@ -59,13 +57,13 @@ public class Respawner : MonoBehaviour
         this.lineIndex = lineIndex;
         respawnDelay = Random.Range(3f, 6f);
 
-        if (obstacleType == ObstacleType.Car)
+        if (obstacleType == LevelManager.ObstacleType.Car)
         {
-            ObstacleMoveSpeed = Random.Range(1.5f, 3.5f);
+            ObstacleMoveSpeed = Random.Range(2f, 5f);
         }
-        else if(obstacleType == ObstacleType.Log)
+        else if(obstacleType == LevelManager.ObstacleType.Log)
         {
-            ObstacleMoveSpeed = Random.Range(1f, 2f);
+            ObstacleMoveSpeed = Random.Range(2f, 4f);
         }
     }
 
@@ -75,16 +73,16 @@ public class Respawner : MonoBehaviour
         {
             switch (obstacleType)
             {
-                case ObstacleType.Car:
+                case LevelManager.ObstacleType.Car:
                     SetCarObstacle();
                     break;
-                case ObstacleType.Log:
+                case LevelManager.ObstacleType.Log:
                     SetLogObstacle();
                     break;
-                case ObstacleType.Tree:
+                case LevelManager.ObstacleType.Tree:
                     SetTreeObstacle();
                     yield break;
-                case ObstacleType.Floater:
+                case LevelManager.ObstacleType.Floater:
                     SetFloaterObstacle();
                     yield break;
             }
@@ -96,7 +94,21 @@ public class Respawner : MonoBehaviour
     {
         int randCount = Random.Range(1, randomCountMax);
         List<int> randomNumber = CommonUtility.RandomInt(0, LinearLineGenerator.maxTile - 1, randCount);
-
+        if (lineIndex > 2)
+        {
+            Respawner prevRespawner = LevelManager.Instance.RespawnerList[lineIndex - 2].GetComponent<Respawner>();
+            if (prevRespawner.obstacleType == LevelManager.ObstacleType.Floater)
+            {
+                randomNumber = CommonUtility.RandomIntExceptNumber
+                (
+                    0,
+                    LinearLineGenerator.maxTile - 1,
+                    randCount,
+                    prevRespawner.obstacleQueue.Peek().GetComponent<Floater>().PositionIndex
+                );
+            }
+        }
+        
         for (int i = 0; i < randomNumber.Count; ++i)
         {
             GameObject newObject = ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].BorrowObject();

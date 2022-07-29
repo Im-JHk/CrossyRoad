@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,9 +5,9 @@ public class ObjectPool : MonoBehaviour
 {
     private Queue<GameObject> objectQueue = new Queue<GameObject>();
     private GameObject objectPrefab;
-    private ObjectPrefabType objectType;
+    private LevelManager.ObjectPoolTypeList objectType;
 
-    public void InitalizePool(GameObject prefab, ObjectPrefabType type, int numbers)
+    public void InitalizePool(GameObject prefab, LevelManager.ObjectPoolTypeList type, int numbers)
     {
         objectPrefab = prefab;
         objectType = type;

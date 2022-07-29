@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Deactivater : MonoBehaviour
 {
     private Vector3 worldPosition;
-    private ObjectPrefabType objectType;
+    private LevelManager.ObjectPoolTypeList objectType;
     private float returnRotateAngle = 0f;
 
     #region properties
@@ -17,13 +15,13 @@ public class Deactivater : MonoBehaviour
         worldPosition = position;
     }
 
-    public void InitializeState(Vector3 position, ObjectPrefabType objectType)
+    public void InitializeState(Vector3 position, LevelManager.ObjectPoolTypeList objectType)
     {
         this.worldPosition = position;
         this.objectType = objectType;
     }
 
-    public void InitializeState(Vector3 position, ObjectPrefabType objectType, float rotateAngle)
+    public void InitializeState(Vector3 position, LevelManager.ObjectPoolTypeList objectType, float rotateAngle)
     {
         this.worldPosition = position;
         this.objectType = objectType;

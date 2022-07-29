@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackBird : MonoBehaviour
@@ -8,7 +6,7 @@ public class AttackBird : MonoBehaviour
     private GameObject targetObject = null;
     private Rigidbody rigidbody = null;
     private Vector3 direction = Vector3.zero;
-    private ObjectPrefabType objectType = ObjectPrefabType.AttackBird;
+    private LevelManager.ObjectPoolTypeList objectType = LevelManager.ObjectPoolTypeList.AttackBird;
     private float moveSpeed = 10f;
     private float height = 2f;
     private float activePositionZ = 10f;
@@ -43,10 +41,10 @@ public class AttackBird : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("rise: " + riseDirection.normalized);
             rigidbody.velocity = riseDirection.normalized * moveSpeed;
             collision.rigidbody.useGravity = false;
             collision.rigidbody.velocity = rigidbody.velocity;
+            isTakePlayer = true;
         }
     }
 }

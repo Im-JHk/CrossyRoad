@@ -1,9 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackBirdBlock : MonoBehaviour
+public class DeadCheckColliders : MonoBehaviour, IFollowMovable
 {
+    [SerializeField]
+    private GameObject[] colliders;
     private readonly float maxMoveTime = 0.1f;
 
     public void FollowTargetMove(Vector3 moveDistance)
@@ -26,14 +27,5 @@ public class AttackBirdBlock : MonoBehaviour
         transform.position = targetPosition;
 
         yield break;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("AttackBird"))
-        {
-            print("bird coll block");
-            GameManager.Instance.GameOver();
-        }
     }
 }

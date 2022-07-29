@@ -1,26 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Player player = null;
     private PlayerController playerController = null;
-    //private Animator animator;
 
     private Vector3 direction;
     private Vector2Int currentTile;
     private DirectionType directionType;
+    private float elapsedTime = 0f;
     private bool canMove = false;
     private bool isMove = false;
     private bool isJumpReady = false;
 
+    private static readonly float moveInputDelay = 0.6f;
     private static readonly float maxMoveTime = 0.4f;
     private static readonly float maxHalfMoveTime = 0.1f;
     private static readonly float jumpPower = 10f;
     private static readonly float rotationSpeed = 360f;
 
     public Vector3 Direction { get { return direction; } private set { direction = value; } }
+    public Vector2Int CurrentTile { get { return currentTile; } private set { currentTile = value; } }
     public bool IsMove { get { return isMove; } private set { isMove = value; } }
     public bool IsJumpReady { get { return isJumpReady; } private set { isJumpReady = value; } }
 
@@ -28,31 +29,33 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponentInParent<Player>();
         playerController = GetComponent<PlayerController>();
-        //animator = GetComponent<Animator>();
-
         currentTile = new Vector2Int(0, LinearLineGenerator.maxHalfTile);
     }
 
     private void Start()
     {
-        player.transform.position = LevelManager.Instance.LinearLineList[currentTile.x].TileList[currentTile.y].TilePosition + new Vector3(0f, 0.2f, 0f);
         directionType = DirectionType.Down;
-    }
-
-    private void FixedUpdate()
-    {
     }
 
     private void Update()
     {
-        if (GameManager.Instance.GetGameState == GameManager.GameState.Play && !isMove)
+        elapsedTime += Time.deltaTime;
+        print(elapsedTime);
+        if (GameManager.Instance.GetGameState == GameManager.GameState.Play && !isMove && elapsedTime >= moveInputDelay)
         {
             SetMovementInfomation();
-            if (canMove)
+            if (canMove && elapsedTime >= moveInputDelay)
             {
                 StartCoroutine(Move());
+                elapsedTime = 0f;
             }
         }
+    }
+
+    public void SetInitialize()
+    {
+        player.transform.position = LevelManager.Instance.LinearLineList[currentTile.x].TileList[currentTile.y].TilePosition + new Vector3(0f, 0.2f, 0f);
+        directionType = DirectionType.Down;
     }
 
     private IEnumerator Move()

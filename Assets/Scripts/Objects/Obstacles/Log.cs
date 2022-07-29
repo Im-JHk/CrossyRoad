@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Log : Obstacle
@@ -50,23 +48,7 @@ public class Log : Obstacle
             collision.rigidbody.velocity = this.rigidbody.velocity;
         }
     }
-    private void OnCollisionStay(Collision collision)
-    {
-        //if (isSetCollision && collision.collider.CompareTag("Player"))
-        //{
-        //    print("set");
-        //    if (collision.collider.transform.position.x > this.transform.position.x)
-        //    {
-        //        collision.transform.position = this.transform.position + new Vector3(this.transform.lossyScale.z * 0.25f, this.transform.lossyScale.y * 0.5f, 0f);
-        //    }
-        //    else
-        //    {
-        //        collision.transform.position = this.transform.position + new Vector3(-this.transform.lossyScale.z * 0.25f, this.transform.lossyScale.y * 0.5f, 0f);
-        //    }
-        //    collision.rigidbody.velocity = this.rigidbody.velocity;
-        //    //isSetCollision = false;
-        //}
-    }
+
     private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))

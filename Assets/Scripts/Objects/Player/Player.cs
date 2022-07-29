@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,6 +5,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject playerObject = null;
     private Animator playerAnimator = null;
+    private PlayerMovement playerMovement = null;
     private bool isAlive = true;
 
     public GameObject PlayerObject { get { return playerObject; } private set { playerObject = value; } }
@@ -16,17 +15,13 @@ public class Player : MonoBehaviour
     void Awake()
     {
         playerAnimator = GetComponent<Animator>();
-    }
-
-    void Update()
-    {
-        
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void InitializePlayer()
     {
         isAlive = true;
-        transform.position = new Vector3(0f, 0f, 0f);
+        transform.position = LevelManager.Instance.LinearLineList[playerMovement.CurrentTile.x].TileList[playerMovement.CurrentTile.y].TilePosition + new Vector3(0f, 0.2f, 0f);
     }
 
     public void OnChangeAliveState(bool b)
@@ -37,10 +32,19 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("AttackObstacle") || other.CompareTag("Floor"))
+        if (other.CompareTag("AttackObstacle"))
         {
             isAlive = false;
             playerAnimator.SetTrigger("OnDie");
+            GameManager.Instance.GameOver();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("DeadFloor"))
+        {
+            isAlive = false;
             GameManager.Instance.GameOver();
         }
     }

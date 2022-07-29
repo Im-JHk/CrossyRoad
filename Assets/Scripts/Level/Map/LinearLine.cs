@@ -1,16 +1,16 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LinearLine : MonoBehaviour
 {
     public GameObject lineObject = null;
+    public Transform centerTransform = null;
 
     #region private variable
     private List<Tile> tileList = new List<Tile>();
     private Material lineMaterial;
     private Transform lineTransform;
-    private LinearLineType lineType;
+    private LevelManager.LinearLineType lineType;
     private int lineIndex;
     #endregion
 
@@ -18,14 +18,16 @@ public class LinearLine : MonoBehaviour
     public List<Tile> TileList { get { return tileList; } set { tileList = value; } }
     public Material LineMaterial { get { return lineMaterial; } private set { lineMaterial = value; } }
     public Transform LineTransform { get { return lineTransform; } private set { lineTransform = value; } }
-    public LinearLineType LineType { get { return lineType; } private set { lineType = value; } }
+    public LevelManager.LinearLineType LineType { get { return lineType; } private set { lineType = value; } }
     public int LineIndex { get { return lineIndex; } private set { lineIndex = value; } }
     #endregion
 
-    public LinearLine(GameObject prefab, Vector3 position, LinearLineType type, int index)
+    public LinearLine(GameObject prefab, Vector3 position, LevelManager.LinearLineType type, int index)
     {
-        lineObject = Instantiate(prefab);
+        lineObject = prefab;
         lineObject.transform.position = position;
+        centerTransform = lineObject.transform.GetChild(0);
+        centerTransform.transform.position = position;
         lineTransform = lineObject.transform;
         lineType = type;
         lineIndex = index;
@@ -34,9 +36,9 @@ public class LinearLine : MonoBehaviour
     public Tile GetTile(int index) { return tileList[index]; }
     public void SetTile()
     {
-        float horizontalLength = lineObject.transform.lossyScale.z;
-        Vector3 zeroPosition = lineObject.transform.position + 
-            new Vector3(-LinearLineGenerator.halfLineWidth, LinearLineGenerator.halfLineHeight, LinearLineGenerator.halfLineDepth);
+        float horizontalLength = centerTransform.transform.lossyScale.z;
+        Vector3 zeroPosition = centerTransform.transform.position + 
+            new Vector3(-LinearLineGenerator.halfLineCenterWidth, LinearLineGenerator.halfLineHeight, LinearLineGenerator.halfLineDepth);
         for (int i = 0; i < (int)horizontalLength; ++i)
         {
             Tile tile = new Tile

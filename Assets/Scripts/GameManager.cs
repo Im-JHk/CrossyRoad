@@ -25,19 +25,15 @@ public class GameManager : SingletonBase<GameManager>
     [SerializeField]
     private CameraMovement cameraMovement = null;
     [SerializeField]
-    private DeadBlock deadblock = null;
+    private DeadCheckColliders deadCheckColliders = null;
     [SerializeField]
-    private AttackBirdBlock attackBirdBlock = null;
+    private DeadBlock deadblock = null;
     [SerializeField]
     private GameObject attackBird = null;
 
     private GameState gameState;
-
     private int gameScore;
     private int coinScore;
-
-    //private bool isPause = false;
-    //private bool isGameover = false;
     private bool isMoveStart = false;
 
     private static readonly float moveSpeed = 0.005f;
@@ -48,8 +44,6 @@ public class GameManager : SingletonBase<GameManager>
     public float MoveSpeed { get { return moveSpeed; } }
     public int GameScore { get { return gameScore; } }
     public int CoinScore { get { return coinScore; } }
-   // public bool IsPause { get { return isPause; } private set { isPause = value; } }
-    //public bool IsGameover { get { return isGameover; } private set { isGameover = value; } }
     public bool IsMoveStart { get { return isMoveStart; } private set { isMoveStart = value; } }
     #endregion
 
@@ -57,8 +51,8 @@ public class GameManager : SingletonBase<GameManager>
     {
         Cursor.lockState = CursorLockMode.Confined;
         cameraMovement = GetComponentInChildren<CameraMovement>();
+        deadCheckColliders = GetComponentInChildren<DeadCheckColliders>();
         deadblock = GetComponentInChildren<DeadBlock>();
-        attackBirdBlock = GetComponentInChildren<AttackBirdBlock>();
     }
 
     private void Start()
@@ -68,6 +62,11 @@ public class GameManager : SingletonBase<GameManager>
         coinScore = 0;
         UIManager.Instance.UpdateTextGameScore(gameScore);
         UIManager.Instance.UpdateTextCoinScore(coinScore);
+
+        ObjectPoolManager.Instance.InitializeObjectPoolManager();
+        LevelManager.Instance.InitializeLevelManager();
+
+        player.InitializePlayer();
     }
 
     private void FixedUpdate()
@@ -116,13 +115,15 @@ public class GameManager : SingletonBase<GameManager>
         switch (directionType)
         {
             case DirectionType.Up:
-                if (deadblock.transform.position.z <= playerPosition.z)
+                if (deadCheckColliders.transform.position.z <= playerPosition.z)
                 {
                     FollowMoveAll(moveDistance);
                 }
+                UpdateGameScore(1);
+                LevelManager.Instance.AddLinearLine();
                 break;
             case DirectionType.Left: case DirectionType.Right:
-                CameraMove(moveDistance, CameraFollowTarget.Player);
+                CameraMove(moveDistance, CameraMovement.CameraFollowTarget.Player);
                 break;
             default:
                 break;
@@ -131,12 +132,11 @@ public class GameManager : SingletonBase<GameManager>
 
     public void FollowMoveAll(Vector3 moveDistance)
     {
-        CameraMove(moveDistance, CameraFollowTarget.Player);
-        deadblock.FollowTargetMove(moveDistance);
-        attackBirdBlock.FollowTargetMove(moveDistance);
+        CameraMove(moveDistance, CameraMovement.CameraFollowTarget.Player);
+        deadCheckColliders.FollowTargetMove(moveDistance);
     }
 
-    public void CameraMove(Vector3 moveDistance, CameraFollowTarget followTarget)
+    public void CameraMove(Vector3 moveDistance, CameraMovement.CameraFollowTarget followTarget)
     {
         cameraMovement.FollowTarget(moveDistance, followTarget);
     }
@@ -144,18 +144,20 @@ public class GameManager : SingletonBase<GameManager>
     public void OnDieFromDeadBlock()
     {
         gameState = GameState.Delay;
-        attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[ObjectPrefabType.AttackBird].BorrowObject();
+        attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[LevelManager.ObjectPoolTypeList.AttackBird].BorrowObject();
         attackBird.GetComponent<AttackBird>().SetInitialize();
     }
 
     public void UpdateGameScore(int plus)
     {
         gameScore += plus;
+        UIManager.Instance.UpdateTextGameScore(gameScore);
     }
 
     public void UpdateCoinScore(int plus)
     {
         coinScore += plus;
+        UIManager.Instance.UpdateTextCoinScore(coinScore);
     }
 
     public void RestartGame()

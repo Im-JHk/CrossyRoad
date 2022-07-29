@@ -1,16 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public enum CameraFollowTarget
+public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
 {
-    Player = 0,
-    DeadBlock,
-    AttackBird
-}
+    public enum CameraFollowTarget
+    {
+        Player = 0,
+        DeadBlock,
+        AttackBird
+    }
 
-public class CameraMovement : MonoBehaviour, IMovable
-{
     [SerializeField]
     private Camera mainCamera = null;
     [SerializeField]
@@ -22,7 +21,6 @@ public class CameraMovement : MonoBehaviour, IMovable
 
     private Vector3 cameraBaseOffset = new Vector3(2.5f, 10f, -2.5f);
     private Vector3 cameraBaseRotation = new Vector3(60f, -30f, 0f);
-    private Vector3 cameraMoveOffset = new Vector3(0f, 0f, 0.005f);
     private CameraFollowTarget cameraFollowTarget;
 
     private readonly float maxMoveTime = 0.2f;
@@ -38,8 +36,6 @@ public class CameraMovement : MonoBehaviour, IMovable
 
     public void Move()
     {
-        //mainCamera.transform.position = mainCamera.transform.position + cameraMoveOffset;
-        //mainCamera.transform.Translate(Vector3.forward * moveSpeed);
         mainCamera.transform.position = mainCamera.transform.position + Vector3.forward * GameManager.Instance.MoveSpeed;
     }
 

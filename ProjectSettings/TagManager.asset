@@ -7,13 +7,13 @@ TagManager:
   - AttackObstacle
   - Grass
   - Road
-  - Rail
   - Water
   - PropObstacle
   - BlockObstacle
+  - DeadBlock
+  - DeadFloor
   - AttackBird
-  - Floor
-  - AttackBirdBlock
+  - AttackBirdOutBlock
   layers:
   - Default
   - TransparentFX

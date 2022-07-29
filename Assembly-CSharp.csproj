@@ -57,28 +57,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\CharacterSelect.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\DeadBlock.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\DeadBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Level\Map\LinearLineGenerator.cs" />
     <Compile Include="Assets\Scripts\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\AttackBird.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovemnet.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\AttackBird.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPoolManager.cs" />
-    <Compile Include="Assets\Scripts\Interface\IMovable.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\DeadCheckColliders.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\ICyclicMovable.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Log.cs" />
     <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Floater.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\ObstacleMovement.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\DeadFloor.cs" />
     <Compile Include="Assets\Etc\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\Level\Map\LinearLine.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\RespawnerGenerator.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Deactivater.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Car.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\AttackBirdOutBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Tree.cs" />
     <Compile Include="Assets\Scripts\Level\Map\Tile.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Obstacle.cs" />
@@ -86,7 +87,7 @@
     <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CommonUtility.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
-    <Compile Include="Assets\Scripts\Objects\Obstacles\AttackBirdBlock.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IFollowMovable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />

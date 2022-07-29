@@ -24,6 +24,7 @@ public class DeadBlock : MonoBehaviour, ICyclicMovable
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.CameraShake(1f, 10f);
             GameManager.Instance.OnDieFromDeadBlock();
         }
     }

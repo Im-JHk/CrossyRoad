@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
-        print(elapsedTime);
         if (GameManager.Instance.GetGameState == GameManager.GameState.Play && !isMove && elapsedTime >= moveInputDelay)
         {
             SetMovementInfomation();
@@ -65,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetPosition = player.transform.position + direction * LinearLineGenerator.moveOnePoint;
         Quaternion startRotation = player.transform.rotation;
 
+        SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.PlayerMoveSound);
         isMove = true;
         player.PlayerAnimator.SetBool("OnMove", true);
 

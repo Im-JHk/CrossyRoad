@@ -26,7 +26,8 @@ public class LevelManager : SingletonBase<LevelManager>
     }
     public enum ObstacleType
     {
-        Tree = 0,
+        None = 0,
+        Tree,
         Car,
         Floater,
         Log
@@ -64,7 +65,7 @@ public class LevelManager : SingletonBase<LevelManager>
         {
             AddLinearLine();
         }
-        for (int i = 1; i < linearLineList.Count; ++i)
+        for (int i = 0; i < linearLineList.Count; ++i)
         {
             SetRespawner(i);
         }
@@ -128,7 +129,21 @@ public class LevelManager : SingletonBase<LevelManager>
         }
         objectType = (ObjectPoolTypeList)randNumberForType;
 
+        if(lineIndex == 0)
+        {
+            obstacleType = ObstacleType.None;
+            objectType = ObjectPoolTypeList.Respawner;
+        }
+
         if(obstacleType == ObstacleType.Tree || obstacleType == ObstacleType.Floater)
+        {
+            respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);
+            deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);
+
+            respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, lineIndex));
+            deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType));
+        }
+        else if (obstacleType == ObstacleType.None)
         {
             respawnerPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);
             deactivaterPosition = linearLineList[lineIndex].LineTransform.position + new Vector3(0f, LinearLineGenerator.lineHeight * 3f, 0f);

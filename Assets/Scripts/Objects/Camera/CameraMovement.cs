@@ -22,6 +22,7 @@ public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
     private Vector3 cameraBaseOffset = new Vector3(2.5f, 10f, -2.5f);
     private Vector3 cameraBaseRotation = new Vector3(60f, -30f, 0f);
     private CameraFollowTarget cameraFollowTarget;
+    private float remainShakeTime = 0;
 
     private readonly float maxMoveTime = 0.2f;
 
@@ -32,6 +33,42 @@ public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
         cameraFollowTarget = CameraFollowTarget.Player;
         mainCamera.transform.eulerAngles = cameraBaseRotation;
         mainCamera.transform.position = playerTransform.position + cameraBaseOffset;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            print("shake?");
+            GameManager.Instance.CameraShake(2f, 10f);
+        }
+    }
+
+    public void ShakeCamera(float time, float shakePower)
+    {
+        remainShakeTime = time;
+        StartCoroutine("ShakeByRotation", shakePower);
+    }
+
+    private IEnumerator ShakeByRotation(float shakePower)
+    {
+        Vector3 originRotation = transform.eulerAngles;
+
+        while(remainShakeTime > 0)
+        {
+            float x = Random.Range(-1f, 1f);
+            float y = Random.Range(-1f, 1f);
+            float z = Random.Range(-1f, 1f);
+            transform.rotation = Quaternion.Euler(originRotation + new Vector3(x, y, z) * shakePower);
+
+            remainShakeTime -= Time.deltaTime;
+
+            yield return null;
+        }
+        transform.rotation = Quaternion.Euler(originRotation);
+        remainShakeTime = 0f;
+
+        yield break;
     }
 
     public void Move()

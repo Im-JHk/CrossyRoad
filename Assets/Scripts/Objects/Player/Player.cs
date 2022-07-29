@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("AttackObstacle"))
         {
+            GameManager.Instance.CameraShake(1f, 5f);
+            SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.CrashCollisionSound);
             isAlive = false;
             playerAnimator.SetTrigger("OnDie");
             GameManager.Instance.GameOver();
@@ -44,6 +46,8 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DeadFloor"))
         {
+            GameManager.Instance.CameraShake(1f, 5f);
+            SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.CrashCollisionSound);
             isAlive = false;
             GameManager.Instance.GameOver();
         }

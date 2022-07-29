@@ -85,6 +85,8 @@ public class Respawner : MonoBehaviour
                 case LevelManager.ObstacleType.Floater:
                     SetFloaterObstacle();
                     yield break;
+                case LevelManager.ObstacleType.None:
+                    yield break;
             }
             yield return new WaitForSeconds(respawnDelay);
         }
@@ -96,7 +98,7 @@ public class Respawner : MonoBehaviour
         List<int> randomNumber = CommonUtility.RandomInt(0, LinearLineGenerator.maxTile - 1, randCount);
         if (lineIndex > 2)
         {
-            Respawner prevRespawner = LevelManager.Instance.RespawnerList[lineIndex - 2].GetComponent<Respawner>();
+            Respawner prevRespawner = LevelManager.Instance.RespawnerList[lineIndex - 1].GetComponent<Respawner>();
             if (prevRespawner.obstacleType == LevelManager.ObstacleType.Floater)
             {
                 randomNumber = CommonUtility.RandomIntExceptNumber

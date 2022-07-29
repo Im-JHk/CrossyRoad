@@ -80,6 +80,7 @@ public class GameManager : SingletonBase<GameManager>
 
     public void GamePause()
     {
+        SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.ButtonClickSound);
         Time.timeScale = 0f;
         gameState = GameState.Pause;
         UIManager.Instance.SetActivePauseButtonUI(false);
@@ -88,6 +89,7 @@ public class GameManager : SingletonBase<GameManager>
 
     public void GameResume()
     {
+        SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.ButtonClickSound);
         gameState = GameState.Play;
         UIManager.Instance.SetActivePauseUI(false);
         UIManager.Instance.SetActivePauseButtonUI(true);
@@ -121,6 +123,7 @@ public class GameManager : SingletonBase<GameManager>
                 }
                 UpdateGameScore(1);
                 LevelManager.Instance.AddLinearLine();
+                LevelManager.Instance.SetRespawner(LevelManager.Instance.LinearLineList.Count - 1);
                 break;
             case DirectionType.Left: case DirectionType.Right:
                 CameraMove(moveDistance, CameraMovement.CameraFollowTarget.Player);
@@ -141,11 +144,17 @@ public class GameManager : SingletonBase<GameManager>
         cameraMovement.FollowTarget(moveDistance, followTarget);
     }
 
+    public void CameraShake(float time, float shakePower)
+    {
+        cameraMovement.ShakeCamera(time, shakePower);
+    }
+
     public void OnDieFromDeadBlock()
     {
         gameState = GameState.Delay;
         attackBird = ObjectPoolManager.Instance.ObjectPoolDictionary[LevelManager.ObjectPoolTypeList.AttackBird].BorrowObject();
         attackBird.GetComponent<AttackBird>().SetInitialize();
+        SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.FlySound);
     }
 
     public void UpdateGameScore(int plus)

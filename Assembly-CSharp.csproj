@@ -56,21 +56,22 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\CharacterSelect.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\DeadBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Level\Map\LinearLineGenerator.cs" />
     <Compile Include="Assets\Scripts\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\AttackBird.cs" />
+    <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPoolManager.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\DeadCheckColliders.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Interfaces\ICyclicMovable.cs" />
+    <Compile Include="Assets\Scripts\Sounds\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Log.cs" />
-    <Compile Include="Assets\AddAssets\_Gloomy_Animal\Script\MouseOrbitImproved.cs" />
+    <Compile Include="Assets\Scripts\UI\IntroUI.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Floater.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\DeadFloor.cs" />
     <Compile Include="Assets\Etc\TutorialInfo\Scripts\Readme.cs" />
@@ -82,19 +83,13 @@
     <Compile Include="Assets\Scripts\Level\DeadCheck\AttackBirdOutBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Tree.cs" />
     <Compile Include="Assets\Scripts\Level\Map\Tile.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\OutBlock.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Camera\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\CommonUtility.cs" />
     <Compile Include="Assets\Scripts\Level\Respawner\Respawner.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IFollowMovable.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Global.shader" />
-    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Object.shader" />
-    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Global.shader" />
-    <None Include="Assets\AddAssets\PolygonPrototype\Shaders\Prototype_Glass_Object.shader" />
-    <None Include="Assets\AddAssets\VoxelAnimals\Documentation\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

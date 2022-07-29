@@ -843,6 +843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameoverUI: {fileID: 6820376556895300137}
+  pauseUI: {fileID: 0}
+  pauseButtonUI: {fileID: 0}
   gameScore: {fileID: 6820376557660503242}
   coinScore: {fileID: 6820376556797313835}
 --- !u!1 &6820376556254956318
@@ -1502,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6820376557300297349
 RectTransform:
   m_ObjectHideFlags: 0

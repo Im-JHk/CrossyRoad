@@ -109,12 +109,12 @@ public class LevelManager : SingletonBase<LevelManager>
                 if (randNumberForType == 9)
                 {
                     obstacleType = ObstacleType.Floater;
-                    if (lineIndex >= 2)
+                    if (lineIndex >= 1)
                     {
-                        if(respawnerList[lineIndex - 2].GetComponent<Respawner>().ObstacleType == ObstacleType.Floater)
+                        if(respawnerList[lineIndex - 1].GetComponent<Respawner>().ObstacleType == ObstacleType.Floater)
                         {
                             obstacleType = ObstacleType.Log;
-                            randNumberForType += 1;
+                            randNumberForType = (int)ObjectPoolTypeList.Log;
                         }
                     }
                 }
@@ -172,6 +172,11 @@ public class LevelManager : SingletonBase<LevelManager>
             respawnerList.Add(respawnerGenerator.GenerateRespawner(respawnerPosition, obstacleType, objectType, direction, rotateAngle, lineIndex));
             deactivaterList.Add(respawnerGenerator.GenerateDeactivater(deactivaterPosition, objectType, -rotateAngle));
         }
+    }
+
+    public Vector3 GetTilePositionToIndex(Vector2Int currentIndex)
+    {
+        return LinearLineList[currentIndex.x].TileList[currentIndex.y].TilePosition;
     }
 
     private void OnDrawGizmos()

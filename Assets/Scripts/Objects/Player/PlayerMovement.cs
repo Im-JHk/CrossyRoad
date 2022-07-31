@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private DirectionType directionType;
     private float elapsedTime = 0f;
     private bool canMove = false;
-    private bool isMove = false;
     private bool isJumpReady = false;
 
     private static readonly float moveInputDelay = 0.6f;
@@ -22,7 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 Direction { get { return direction; } private set { direction = value; } }
     public Vector2Int CurrentTile { get { return currentTile; } private set { currentTile = value; } }
-    public bool IsMove { get { return isMove; } private set { isMove = value; } }
     public bool IsJumpReady { get { return isJumpReady; } private set { isJumpReady = value; } }
 
     private void Awake()
@@ -40,32 +38,39 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         elapsedTime += Time.deltaTime;
-        if (GameManager.Instance.GetGameState == GameManager.GameState.Play && !isMove && elapsedTime >= moveInputDelay)
+        if (GameManager.Instance.GetGameState == GameManager.GameState.Play && player.PlayerState != Player.PlayerStateType.Move)
         {
-            SetMovementInfomation();
-            if (canMove && elapsedTime >= moveInputDelay)
+            if(player.PlayerState == Player.PlayerStateType.CarriedByLog)
             {
-                StartCoroutine(Move());
-                elapsedTime = 0f;
+                currentTile = new Vector2Int(currentTile.x, (int)(player.transform.position.x + LinearLineGenerator.maxHalfTile) / LinearLineGenerator.tileOneSizeInt);
+            }
+            if(elapsedTime >= moveInputDelay)
+            {
+                SetMovementInfomation();
+                if (canMove)
+                {
+                    StartCoroutine(Move(directionType));
+                    elapsedTime = 0f;
+                }
             }
         }
     }
 
     public void SetInitialize()
     {
-        player.transform.position = LevelManager.Instance.LinearLineList[currentTile.x].TileList[currentTile.y].TilePosition + new Vector3(0f, 0.2f, 0f);
+        player.transform.position = LevelManager.Instance.GetTilePositionToIndex(currentTile) + new Vector3(0f, 0.2f, 0f);
         directionType = DirectionType.Down;
     }
 
-    private IEnumerator Move()
+    private IEnumerator Move(DirectionType moveDirection)
     {
         float elapsedMoveTime = 0.0f;
         Vector3 startPosition = player.transform.position;
-        Vector3 targetPosition = player.transform.position + direction * LinearLineGenerator.moveOnePoint;
+        Vector3 targetPosition = LevelManager.Instance.GetTilePositionToIndex(currentTile) + direction * LinearLineGenerator.moveOnePoint;
         Quaternion startRotation = player.transform.rotation;
 
         SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.PlayerMoveSound);
-        isMove = true;
+        player.OnChangeState(Player.PlayerStateType.Move);
         player.PlayerAnimator.SetBool("OnMove", true);
 
         while (elapsedMoveTime < maxMoveTime)
@@ -77,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
         player.transform.position = targetPosition;
 
-        switch (directionType)
+        switch (moveDirection)
         {
             case DirectionType.None:
                 break;
@@ -96,8 +101,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         canMove = false;
-        isMove = false;
         player.PlayerAnimator.SetBool("OnMove", false);
+        player.OnChangeState(Player.PlayerStateType.Idle);
 
         GameManager.Instance.PlayerMove(player.transform.position, targetPosition - startPosition, directionType);
 
@@ -154,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
                     }
                 }
-                isMove = false;
+                player.OnChangeState(Player.PlayerStateType.Idle);
                 break;
             case DirectionType.Right:
                 if (currentTile.y < LinearLineGenerator.maxTile - 1)
@@ -165,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
                     }
                 }
-                isMove = false;
+                player.OnChangeState(Player.PlayerStateType.Idle);
                 break;
             case DirectionType.Up:
                 if (currentTile.x < LevelManager.Instance.LinearLineList.Count - 1)
@@ -176,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
                     }
                 }
-                isMove = false;
+                player.OnChangeState(Player.PlayerStateType.Idle);
                 break;
             case DirectionType.Down:
                 if (currentTile.x > 0)
@@ -187,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
                         break;
                     }
                 }
-                isMove = false;
+                player.OnChangeState(Player.PlayerStateType.Idle);
                 break;
         }
     }

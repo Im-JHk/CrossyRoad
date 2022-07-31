@@ -17,6 +17,7 @@ public class LinearLineGenerator : MonoBehaviour
     public static readonly float tileOnePointSizeX = 1.0f;
     public static readonly int maxTile = (int)(lineCenterWidth * tileOnePointSizeX);
     public static readonly int maxHalfTile = (int)(lineCenterWidth * 0.5f);
+    public static readonly int tileOneSizeInt = 1;
 
     public LinearLine GenerateLine()
     {

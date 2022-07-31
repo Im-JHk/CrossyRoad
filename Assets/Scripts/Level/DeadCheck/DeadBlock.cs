@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections;
 
 public class DeadBlock : MonoBehaviour, ICyclicMovable
 {
     private BoxCollider boxCollider = null;
+    private readonly float maxMoveTime = 0.1f;
 
     private void Awake()
     {
@@ -20,11 +22,33 @@ public class DeadBlock : MonoBehaviour, ICyclicMovable
         transform.Translate(Vector3.forward * GameManager.Instance.MoveSpeed);
     }
 
+    public void FollowTargetMove(Vector3 moveDistance)
+    {
+        StartCoroutine(FollowMove(moveDistance));
+    }
+
+    private IEnumerator FollowMove(Vector3 moveDistance)
+    {
+        float elapsedMoveTime = 0.0f;
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = transform.position + moveDistance;
+
+        while (elapsedMoveTime < maxMoveTime)
+        {
+            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsedMoveTime / maxMoveTime);
+            elapsedMoveTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.position = targetPosition;
+
+        yield break;
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            GameManager.Instance.CameraShake(1f, 10f);
+            SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.OutCollisionSound);
             GameManager.Instance.OnDieFromDeadBlock();
         }
     }

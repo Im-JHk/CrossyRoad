@@ -18,6 +18,7 @@ TagManager:
   - DriveSound
   - WaterSound
   - SFX
+  - CarryObstacle
   layers:
   - Default
   - TransparentFX

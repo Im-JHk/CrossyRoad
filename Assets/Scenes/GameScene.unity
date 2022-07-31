@@ -807,6 +807,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4047166056181173655, guid: 86a734377da978544861c98043e70560,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1090219386143568, guid: 86a734377da978544861c98043e70560, type: 3}
       propertyPath: m_Name
       value: Prefab_Slime
@@ -869,7 +874,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4047166056181173655, guid: 86a734377da978544861c98043e70560, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 86a734377da978544861c98043e70560, type: 3}
 --- !u!114 &1311431523 stripped
 MonoBehaviour:

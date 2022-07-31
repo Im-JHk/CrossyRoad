@@ -35,7 +35,7 @@ public class Deactivater : MonoBehaviour
             other.gameObject.transform.Rotate(Vector3.up * returnRotateAngle);
             ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].ReturnObject(other.gameObject);
         }
-        else if (other.CompareTag("PropObstacle"))
+        else if (other.CompareTag("CarryObstacle"))
         {
             other.gameObject.transform.Rotate(Vector3.up * returnRotateAngle);
             ObjectPoolManager.Instance.ObjectPoolDictionary[objectType].ReturnObject(other.gameObject);

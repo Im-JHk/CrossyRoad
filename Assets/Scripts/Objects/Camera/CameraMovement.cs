@@ -35,15 +35,6 @@ public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
         mainCamera.transform.position = playerTransform.position + cameraBaseOffset;
     }
 
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            print("shake?");
-            GameManager.Instance.CameraShake(2f, 10f);
-        }
-    }
-
     public void ShakeCamera(float time, float shakePower)
     {
         remainShakeTime = time;
@@ -52,20 +43,20 @@ public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
 
     private IEnumerator ShakeByRotation(float shakePower)
     {
-        Vector3 originRotation = transform.eulerAngles;
+        Vector3 originRotation = mainCamera.transform.eulerAngles;
 
-        while(remainShakeTime > 0)
+        while(remainShakeTime > 0 && GameManager.Instance.GetGameState == GameManager.GameState.Play)
         {
             float x = Random.Range(-1f, 1f);
             float y = Random.Range(-1f, 1f);
             float z = Random.Range(-1f, 1f);
-            transform.rotation = Quaternion.Euler(originRotation + new Vector3(x, y, z) * shakePower);
+            mainCamera.transform.rotation = Quaternion.Euler(originRotation + new Vector3(x, y, z) * shakePower);
 
             remainShakeTime -= Time.deltaTime;
 
             yield return null;
         }
-        transform.rotation = Quaternion.Euler(originRotation);
+        mainCamera.transform.rotation = Quaternion.Euler(originRotation);
         remainShakeTime = 0f;
 
         yield break;

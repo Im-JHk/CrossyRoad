@@ -96,7 +96,7 @@ public class Respawner : MonoBehaviour
     {
         int randCount = Random.Range(1, randomCountMax);
         List<int> randomNumber = CommonUtility.RandomInt(0, LinearLineGenerator.maxTile - 1, randCount);
-        if (lineIndex > 2)
+        if (lineIndex >= 1)
         {
             Respawner prevRespawner = LevelManager.Instance.RespawnerList[lineIndex - 1].GetComponent<Respawner>();
             if (prevRespawner.obstacleType == LevelManager.ObstacleType.Floater)

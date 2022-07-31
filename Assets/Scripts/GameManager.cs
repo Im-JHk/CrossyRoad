@@ -25,7 +25,7 @@ public class GameManager : SingletonBase<GameManager>
     [SerializeField]
     private CameraMovement cameraMovement = null;
     [SerializeField]
-    private DeadCheckColliders deadCheckColliders = null;
+    private AlwaysFollow alwaysFollow = null;
     [SerializeField]
     private DeadBlock deadblock = null;
     [SerializeField]
@@ -51,7 +51,7 @@ public class GameManager : SingletonBase<GameManager>
     {
         Cursor.lockState = CursorLockMode.Confined;
         cameraMovement = GetComponentInChildren<CameraMovement>();
-        deadCheckColliders = GetComponentInChildren<DeadCheckColliders>();
+        alwaysFollow = GetComponentInChildren<AlwaysFollow>();
         deadblock = GetComponentInChildren<DeadBlock>();
     }
 
@@ -117,10 +117,11 @@ public class GameManager : SingletonBase<GameManager>
         switch (directionType)
         {
             case DirectionType.Up:
-                if (deadCheckColliders.transform.position.z <= playerPosition.z)
+                if (deadblock.transform.position.z < playerPosition.z)
                 {
-                    FollowMoveAll(moveDistance);
+                    FollowMoveToLerp(moveDistance);
                 }
+                alwaysFollow.MatchPlayerPositionZ(playerPosition.z);
                 UpdateGameScore(1);
                 LevelManager.Instance.AddLinearLine();
                 LevelManager.Instance.SetRespawner(LevelManager.Instance.LinearLineList.Count - 1);
@@ -133,10 +134,10 @@ public class GameManager : SingletonBase<GameManager>
         }
     }
 
-    public void FollowMoveAll(Vector3 moveDistance)
+    public void FollowMoveToLerp(Vector3 moveDistance)
     {
         CameraMove(moveDistance, CameraMovement.CameraFollowTarget.Player);
-        deadCheckColliders.FollowTargetMove(moveDistance);
+        deadblock.FollowTargetMove(moveDistance);
     }
 
     public void CameraMove(Vector3 moveDistance, CameraMovement.CameraFollowTarget followTarget)

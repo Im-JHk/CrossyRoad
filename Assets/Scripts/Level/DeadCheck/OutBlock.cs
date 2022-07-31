@@ -8,6 +8,7 @@ public class OutBlock : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            GameManager.Instance.CameraShake(0.5f, 2f);
             SoundManager.Instance.PlaySFXSoundByClip(SoundManager.SoundList.OutCollisionSound);
             GameManager.Instance.GameOver();
         }

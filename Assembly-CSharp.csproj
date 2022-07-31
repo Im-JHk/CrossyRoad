@@ -62,7 +62,6 @@
     <Compile Include="Assets\Scripts\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\AttackBird.cs" />
-    <Compile Include="Assets\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Scripts\Level\ObjectPool\ObjectPoolManager.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\DeadCheckColliders.cs" />
     <Compile Include="Assets\Scripts\Objects\Player\PlayerController.cs" />
@@ -72,6 +71,7 @@
     <Compile Include="Assets\Scripts\Level\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Log.cs" />
     <Compile Include="Assets\Scripts\UI\IntroUI.cs" />
+    <Compile Include="Assets\Scripts\Level\DeadCheck\AlwaysFollow.cs" />
     <Compile Include="Assets\Scripts\Objects\Obstacles\Floater.cs" />
     <Compile Include="Assets\Scripts\Level\DeadCheck\DeadFloor.cs" />
     <Compile Include="Assets\Etc\TutorialInfo\Scripts\Readme.cs" />

@@ -1,11 +1,26 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DeadCheckColliders : MonoBehaviour, IFollowMovable
 {
+    public enum FollowCollider
+    {
+        Deadblock = 0,
+        DeadFloor,
+        OutBlock,
+        AttackBirdOutBlock
+    }
+
     [SerializeField]
-    private GameObject[] colliders;
+    private Dictionary<FollowCollider, GameObject> dictionaryColliders;
+    private GameObject alwaysFollowColliders;
     private readonly float maxMoveTime = 0.1f;
+
+    private void Awake()
+    {
+        dictionaryColliders = new Dictionary<FollowCollider, GameObject>();
+    }
 
     public void FollowTargetMove(Vector3 moveDistance)
     {

@@ -1,0 +1,520 @@
+﻿{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1659264340494085, "dur": 922337203685477580, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264340495248, "dur": 23127, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264340518601, "dur": 58258, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264340576881, "dur": 529295, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264341106178, "dur": 359484, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264341465678, "dur": 10541, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264344970271, "dur": 922337203685477580, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264344971899, "dur": 1989, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264344973889, "dur": 30014, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345003905, "dur": 498885, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345502792, "dur": 121147, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345623941, "dur": 1638, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345626538, "dur": 21, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1659264345152934, "dur": 335213, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345153790, "dur": 46662, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345473917, "dur": 4254, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345478173, "dur": 9967, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345478754, "dur": 8381, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345492114, "dur": 1109, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1659264345491447, "dur": 1795, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345626681, "dur": 373, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1659264345538833, "dur":1534, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345540372, "dur":40, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1659264345540422, "dur":12, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1659264345540435, "dur":477, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1659264345540955, "dur":497, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345541452, "dur":0, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605454, "dur":377, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605831, "dur":17, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605848, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605851, "dur":15, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605866, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605869, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605876, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605878, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605885, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605887, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605894, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605896, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605903, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605905, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605918, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605921, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605926, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605928, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605934, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605936, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605941, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605942, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605948, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605950, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605957, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605971, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345605989, "dur":1814, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1659264345541182, "dur":275, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345541457, "dur":6277, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345547738, "dur":220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1659264345547962, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345548961, "dur":3306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1659264345552363, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1659264345552486, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345552512, "dur":2566, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1659264345555176, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345555421, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345555518, "dur":16486, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345572132, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345572248, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345572254, "dur":2405, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345574735, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345574803, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345574830, "dur":2941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345577874, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345577970, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345577975, "dur":3029, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345581106, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345581237, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345581243, "dur":2393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345583729, "dur":699, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345584431, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345584437, "dur":2687, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345587211, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345587311, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345587316, "dur":2988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345590402, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345590508, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345590513, "dur":2206, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":1, "ts":1659264345592852, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level1.resS" }}
+,{ "pid":12345, "tid":1, "ts":1659264345592975, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1659264345592980, "dur":2840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level1.resS" }}
+,{ "pid":12345, "tid":1, "ts":1659264345595906, "dur":9545, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345541206, "dur":256, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345541462, "dur":6271, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345547738, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1659264345548090, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345552801, "dur":2576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":2, "ts":1659264345555485, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad.exe" }}
+,{ "pid":12345, "tid":2, "ts":1659264345555589, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345555593, "dur":1983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad.exe" }}
+,{ "pid":12345, "tid":2, "ts":1659264345557628, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345557683, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345557687, "dur":8404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345566207, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345566303, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345566309, "dur":3694, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345570130, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345570232, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345570237, "dur":2492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345572789, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345572881, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345572886, "dur":2282, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345575242, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345575315, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345575319, "dur":2536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345577952, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345578043, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345578049, "dur":3308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345581483, "dur":287, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345581774, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345581780, "dur":2603, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345584469, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345584580, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345584585, "dur":3206, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345587915, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345588045, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345588049, "dur":4151, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":2, "ts":1659264345592328, "dur":107, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":2, "ts":1659264345592438, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345592443, "dur":2477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":2, "ts":1659264345595090, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1659264345595208, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1659264345595214, "dur":2092, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1659264345597370, "dur":8085, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345541231, "dur":236, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345541467, "dur":6278, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345547746, "dur":239, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1659264345547987, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345549592, "dur":2716, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1659264345552396, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1659264345552542, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345552547, "dur":2835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":3, "ts":1659264345555507, "dur":236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":3, "ts":1659264345555747, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345556054, "dur":12178, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":3, "ts":1659264345568368, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345568501, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345568508, "dur":2772, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345571364, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345571484, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345571490, "dur":2933, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345574506, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345574605, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345574610, "dur":3088, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345577801, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345577927, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345577932, "dur":3023, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345581223, "dur":211, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345581438, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345581444, "dur":2468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345584011, "dur":432, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Profiling.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345584447, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345584452, "dur":2467, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Profiling.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345586995, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345587098, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345587104, "dur":3596, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":3, "ts":1659264345590847, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":3, "ts":1659264345590961, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1659264345590966, "dur":14408, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":3, "ts":1659264345605433, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":3, "ts":1659264345605434, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345541254, "dur":217, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345541471, "dur":6265, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345547743, "dur":255, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1659264345548078, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345550707, "dur":1671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":4, "ts":1659264345552462, "dur":115, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1659264345552579, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345552584, "dur":2627, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1659264345555358, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1659264345555524, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345555528, "dur":6526, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":4, "ts":1659264345562136, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345562205, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345562209, "dur":4556, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345566842, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345566992, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345566996, "dur":2966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345570061, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345570184, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345570189, "dur":2393, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345572704, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345572782, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345572786, "dur":2378, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345575257, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345575338, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345575341, "dur":2803, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345578244, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345578337, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345578340, "dur":3259, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345581692, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345581802, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345581807, "dur":2198, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345584117, "dur":387, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.AdaptivePerformance.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345584507, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345584513, "dur":2681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.AdaptivePerformance.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345587284, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345587376, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345587379, "dur":2969, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345590445, "dur":384, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345590833, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345590838, "dur":2838, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":4, "ts":1659264345593783, "dur":193, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1659264345593980, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1659264345594019, "dur":2919, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level0.resS" }}
+,{ "pid":12345, "tid":4, "ts":1659264345597005, "dur":8454, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345541283, "dur":191, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345541475, "dur":6269, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345547749, "dur":254, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1659264345548082, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345551341, "dur":1978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1659264345553403, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1659264345553524, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345553530, "dur":2585, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1659264345556327, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345556439, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345558768, "dur":7950, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345566811, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345566932, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345566938, "dur":3002, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345570028, "dur":578, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345570609, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345570612, "dur":3058, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345573769, "dur":111, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345573884, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345573890, "dur":3368, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345577349, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345577443, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345577449, "dur":3289, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345580823, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345580926, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345580933, "dur":2056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345583061, "dur":407, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345583471, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345583476, "dur":2371, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345585931, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345586008, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345586013, "dur":2693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345588801, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345588882, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345588888, "dur":1913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1659264345590888, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1659264345590990, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1659264345590995, "dur":8632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1659264345599684, "dur":5768, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345541311, "dur":167, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345541478, "dur":6273, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345547751, "dur":241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1659264345547995, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345550157, "dur":2118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1659264345552375, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1659264345552536, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345552545, "dur":2646, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1659264345555326, "dur":232, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345555561, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345555565, "dur":27737, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345583424, "dur":958, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345584421, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345584427, "dur":2654, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345587179, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345587291, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345587296, "dur":2826, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345590232, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345590334, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1659264345590340, "dur":5607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":6, "ts":1659264345596043, "dur":9410, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345541339, "dur":143, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345541482, "dur":6250, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345547737, "dur":370, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1659264345548110, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345556086, "dur":2573, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1659264345558724, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345558799, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345558803, "dur":7311, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345566201, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345566302, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345566308, "dur":3840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345570254, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345570336, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345570340, "dur":3237, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345573674, "dur":93, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345573841, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345573847, "dur":2851, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345576772, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345576954, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345576962, "dur":2087, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345579142, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345579231, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345579237, "dur":2484, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345581824, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345581926, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345581931, "dur":2489, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345584514, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345584601, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345584604, "dur":4842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345589530, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345589625, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345589631, "dur":2130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1659264345591855, "dur":105, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1659264345591993, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1659264345591999, "dur":3777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":7, "ts":1659264345595972, "dur":9496, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345541358, "dur":128, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345541487, "dur":6255, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345547744, "dur":226, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1659264345547974, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345549185, "dur":2894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1659264345552187, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1659264345552337, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345552519, "dur":2382, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1659264345554993, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345555322, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345555473, "dur":6576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345562154, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345562245, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345562248, "dur":4769, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345567118, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345567200, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345567205, "dur":2939, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345570306, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345570383, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345570387, "dur":3106, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345573593, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345573698, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345573860, "dur":2870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345576815, "dur":145, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345576963, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345576969, "dur":2404, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345579467, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345579553, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345579559, "dur":3913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345583567, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345583667, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345583672, "dur":2604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345586359, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345586446, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345586478, "dur":2427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345589006, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345589093, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345589098, "dur":2959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1659264345592145, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1659264345592245, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345592250, "dur":2755, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1659264345595134, "dur":118, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1659264345595256, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1659264345595262, "dur":1995, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":8, "ts":1659264345597331, "dur":8126, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345541388, "dur":102, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345541490, "dur":6260, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345547750, "dur":271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1659264345548086, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345552052, "dur":1808, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":9, "ts":1659264345553953, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":9, "ts":1659264345554114, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345554120, "dur":2615, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":9, "ts":1659264345556822, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345556899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345556904, "dur":8813, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345565847, "dur":120, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345565970, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345565976, "dur":3541, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345569584, "dur":62, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345569650, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345569655, "dur":2886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345572609, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345572676, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345572680, "dur":2116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345574861, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345574955, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345574960, "dur":2930, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345577986, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345578073, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345578078, "dur":2756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345580933, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345581041, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345581235, "dur":2232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345583572, "dur":445, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345584020, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345584026, "dur":2990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345587110, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345587217, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345587222, "dur":2607, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345589918, "dur":139, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345590061, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345590066, "dur":2352, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":9, "ts":1659264345592535, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":9, "ts":1659264345592865, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1659264345592870, "dur":3870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":9, "ts":1659264345596833, "dur":8621, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345541408, "dur":86, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345541494, "dur":6244, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345547738, "dur":288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1659264345548093, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345553487, "dur":2435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1659264345556072, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345556192, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345556497, "dur":8203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345564814, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345564940, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345564945, "dur":2861, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345567979, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345568080, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345568085, "dur":2867, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345571063, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345571179, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345571185, "dur":2839, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345574127, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345574221, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345574227, "dur":3253, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345577562, "dur":223, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345577788, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345577793, "dur":2998, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345580888, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345580989, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345580995, "dur":2213, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345583294, "dur":727, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345584024, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345584028, "dur":3225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345587398, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345587475, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345587479, "dur":3171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1659264345590737, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1659264345590819, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345590824, "dur":2326, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":10, "ts":1659264345593243, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level1" }}
+,{ "pid":12345, "tid":10, "ts":1659264345593334, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1659264345593338, "dur":2352, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level1" }}
+,{ "pid":12345, "tid":10, "ts":1659264345595776, "dur":9674, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345541429, "dur":68, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345541497, "dur":6240, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345547737, "dur":321, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1659264345548100, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345555248, "dur":1927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1659264345557235, "dur":60, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345557297, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345557301, "dur":8712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345566139, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345566249, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345566254, "dur":4149, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345570463, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345570522, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345570526, "dur":4010, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345574626, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345574703, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345574707, "dur":2940, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345577892, "dur":140, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345578036, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345578041, "dur":3203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345581380, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345581487, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345581492, "dur":2388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345584005, "dur":388, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Subsystem.Registration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345584425, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345584431, "dur":2533, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/Unity.Subsystem.Registration.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345587064, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345587161, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345587166, "dur":2756, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345590016, "dur":146, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345590171, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345590177, "dur":2315, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":11, "ts":1659264345592578, "dur":435, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":11, "ts":1659264345593016, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345593022, "dur":2166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":11, "ts":1659264345595294, "dur":319, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1659264345595617, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1659264345595621, "dur":1631, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/boot.config" }}
+,{ "pid":12345, "tid":11, "ts":1659264345597311, "dur":8149, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345541446, "dur":7, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345541454, "dur":6273, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345547737, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1659264345547739, "dur":296, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345548041, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1659264345548097, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345554423, "dur":1748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/app.info" }}
+,{ "pid":12345, "tid":12, "ts":1659264345556172, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345556276, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345556462, "dur":9445, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345566009, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345566139, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345566143, "dur":4234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345570439, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345570498, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345570502, "dur":3352, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345573984, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345574080, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345574085, "dur":3679, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345577956, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345578070, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345578076, "dur":3871, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345582046, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345582150, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345582156, "dur":2309, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345584576, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345584665, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345584669, "dur":2758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345587524, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345587630, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345587635, "dur":6548, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":12, "ts":1659264345594286, "dur":99, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level0" }}
+,{ "pid":12345, "tid":12, "ts":1659264345594388, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1659264345594394, "dur":2221, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/wlgur/Desktop/CrossyRoad/CrossyRoad_Data/level0" }}
+,{ "pid":12345, "tid":12, "ts":1659264345596685, "dur":8771, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1659264345609428, "dur":1611, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1659264345627165, "dur": 1011, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1659264345626528, "dur": 1675, "ph": "X", "name": "Write chrome-trace events", "args": {} },

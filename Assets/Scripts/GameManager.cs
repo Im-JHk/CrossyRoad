@@ -145,6 +145,11 @@ public class GameManager : SingletonBase<GameManager>
         cameraMovement.FollowTarget(moveDistance, followTarget);
     }
 
+    public void CameraFollowPlayer()
+    {
+        cameraMovement.FollowPlayer();
+    }
+
     public void CameraShake(float time, float shakePower)
     {
         cameraMovement.ShakeCamera(time, shakePower);

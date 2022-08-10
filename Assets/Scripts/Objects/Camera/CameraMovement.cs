@@ -80,6 +80,11 @@ public class CameraMovement : MonoBehaviour, ICyclicMovable, IFollowMovable
         }
     }
 
+    public void FollowPlayer()
+    {
+        mainCamera.transform.position = playerTransform.position + cameraBaseOffset;
+    }
+
     private IEnumerator FollowMove(Transform target, Vector3 moveDistance)
     {
         float elapsedMoveTime = 0.0f;

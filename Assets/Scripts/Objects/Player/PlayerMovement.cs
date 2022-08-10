@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
             if(player.PlayerState == Player.PlayerStateType.CarriedByLog)
             {
                 currentTile = new Vector2Int(currentTile.x, (int)(player.transform.position.x + LinearLineGenerator.maxHalfTile) / LinearLineGenerator.tileOneSizeInt);
+                GameManager.Instance.CameraFollowPlayer();
             }
             if(elapsedTime >= moveInputDelay)
             {
